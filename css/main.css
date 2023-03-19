@@ -14848,9 +14848,9 @@ a.bb-link-info:hover {
   display: none;
 }
 
-/* 喜欢的游戏 lol */
-.author-content-item.game-lol {
-  background: url(https://p.zhheo.com/2023788ba3b8739936f844e64f483faacaf1085602.png!cover) no-repeat top;
+/* 喜欢的游戏 mc */
+.author-content-item.game-mc {
+  background: url(/img/mc.webp) no-repeat top;
   background-size: cover;
   min-height: 300px;
   overflow: hidden;
@@ -14863,7 +14863,7 @@ a.bb-link-info:hover {
   width: 100%;
   height: 100%;
   top: 0;
-  left: 0;
+  left: 1px;
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -14876,7 +14876,7 @@ a.bb-link-info:hover {
   }
 }
 
-.author-content-item.game-lol::after {
+.author-content-item.game-mc::after {
   box-shadow: 0 -69px 203px 11px #04120f inset;
   position: absolute;
   content: '';
@@ -14904,26 +14904,58 @@ a.bb-link-info:hover {
   margin-right: 0.5rem;
 }
 
-.icon-pos-sup {
-  background: url('https://p.zhheo.com/2023585927467e9bc0720f510850b01985b0081502.png!cover');
-}
-
-.icon-pos-mid {
-  background: url('https://p.zhheo.com/20233ca3efe8e906c7361f4cafec0465fbda083602.png!cover');
-}
-
-/* 喜欢的游戏 狼人杀 */
-.author-content-item.game-wolf {
+/* 喜欢的游戏 王者荣耀 */
+.author-content-item.game-hok {
   width: 39%;
-  background: url(https://p.zhheo.com/2023ff56a55649cf81989b9e1f4efc836907085102.png!cover) no-repeat top;
+  background: url(/img/hok.webp) no-repeat top;
   background-size: cover;
   min-height: 300px;
   overflow: hidden;
   color: var(--heo-white);
 }
 
-.author-content-item.game-wolf::after {
+.author-content-item.game-hok::after {
   box-shadow: 0 -69px 203px 11px #415dc9 inset;
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* 热爱的动漫 声之形 */
+.author-content-item.anime-yourname {
+  background: url(/img/yourname.webp) no-repeat top;
+  background-size: cover;
+  min-height: 300px;
+  overflow: hidden;
+  color: var(--heo-white);
+  width: 49%;
+}
+
+.author-content-item.anime-yourname::after {
+  box-shadow: 0 -69px 203px 11px #04120f inset;
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* 热爱的动漫 声之形 */
+.author-content-item.anime-tsov {
+  background: url(/img/tsov.webp) no-repeat top;
+  background-size: cover;
+  min-height: 300px;
+  overflow: hidden;
+  color: var(--heo-white);
+  width: 49%;
+}
+
+.author-content-item.anime-tsov::after {
+  box-shadow: 0 -69px 203px 11px #04120f inset;
   position: absolute;
   content: '';
   width: 100%;
