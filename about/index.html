@@ -11,7 +11,7 @@
 <meta name="apple-mobile-web-app-title" content="天子笑">
 <link rel="bookmark" href="/img/avatar.webp">
 <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/img/avatar.webp">
-<meta name="description" content="忘羡一曲远 曲终人不散">
+<meta name="description" content="关于">
 <meta name="theme-color" content="#1C1C1F">
 <link rel="stylesheet" href="/css/var.css">
 <link rel="stylesheet" href="/css/main.css">
@@ -32,7 +32,8 @@
 
 
 
-<script>var GOBALCONFIG = {"root":"/","runtime":"2022-10-01 00:00:00","lazyload":{"enable":false,"error":"/img/acrylic.png"},"lightbox":true,"randomlinks":false,"lang":{"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"recent":"最近","yesterday":"昨天","berforeyesterday":"前天","daybefore":"天前","runtime":"天"},"sayhello":{"morning":"早上好","noon":"中午好","afternoon":"下午好","night":"晚上好","goodnight":"晚安","iam":"!  我是"}}};</script><script id="site-config">var PAGECONFIG = {"is_home":false,"is_post":false,"is_page":true,"comment":false,"page":"about","toc":false};</script>
+
+<script>var GLOBALCONFIG = {"root":"/","runtime":"2022-10-01 00:00:00","lazyload":{"enable":false,"error":"/img/acrylic.png"},"lightbox":true,"randomlinks":false,"lang":{"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"recent":"最近","yesterday":"昨天","berforeyesterday":"前天","daybefore":"天前","runtime":"天"},"sayhello":{"morning":"早上好","noon":"中午好","afternoon":"下午好","night":"晚上好","goodnight":"晚安","iam":"!  我是"},"search":{"empty":"搜索结果为空","hit":"已为您找到 ${query} 条结果","placeholder":"输入关键词快速查找"}},"covercolor":false};</script><script id="site-config">var PAGECONFIG = {"is_home":false,"is_post":false,"is_page":true,"page":"about","toc":false,"comment":false};</script>
     <meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="天子笑" type="application/atom+xml">
 </head>
     <body id="body">
@@ -59,6 +60,69 @@
     document.addEventListener('pjax:send', () => { preloader.initLoading() })
     document.addEventListener('pjax:complete', () => { preloader.endLoading() })
 </script>
+<style>
+    #loading-box {
+        -webkit-user-select: none;
+    }
+
+    #loading-box .loading-bg {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background: var(--heo-background);
+        z-index: 1999;
+        opacity: 1;
+        transition: 0.2s;
+        pointer-events: all;
+        animation: showLoading 0.3s 0s backwards;
+    }
+
+    #loading-box.loaded .loading-bg {
+        pointer-events: none;
+        transition: 0.2s;
+        animation: hideLoading 0.3s 0s forwards;
+    }
+
+    #loading-box .loading-img {
+        width: 100px;
+        margin: auto;
+        animation-duration: 0.2s;
+        animation-name: loadingAction;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    @keyframes loadingAction {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0.6;
+        }
+    }
+
+    @keyframes hideLoading {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+
+    @keyframes showLoading {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+</style>
         
         <div id="console" style="zoom: 1;" class="">
     <div class="close-btn" onclick="acrylic.hideConsole()" href="javascript:void(0);">
@@ -97,11 +161,33 @@
             
                 
                 <div class="back-menu-list">
+                    <a class="back-menu-item" href="/home/" rel="external nofollow"
+                        title="主页">
+                        <img class="back-menu-item-icon" src="/img/avatar.webp" loading="lazy">
+                        <span class="back-menu-item-text">
+                            主页
+                        </span>
+                    </a>
+                </div>
+            
+                
+                <div class="back-menu-list">
                     <a class="back-menu-item" href="/" rel="external nofollow"
                         title="博客">
                         <img class="back-menu-item-icon" src="/img/avatar.webp" loading="lazy">
                         <span class="back-menu-item-text">
                             博客
+                        </span>
+                    </a>
+                </div>
+            
+                
+                <div class="back-menu-list">
+                    <a class="back-menu-item" href="/plog/" rel="external nofollow"
+                        title="图片博客">
+                        <img class="back-menu-item-icon" src="/img/avatar.webp" loading="lazy">
+                        <span class="back-menu-item-text">
+                            图片博客
                         </span>
                     </a>
                 </div>
@@ -192,13 +278,6 @@
                         </li>
                     
                         <li>
-                            <a class="site-page child" href="/cinemas/">
-                                <i class="fas fa-clapperboard"></i>
-                                <span> 追剧</span>
-                            </a>
-                        </li>
-                    
-                        <li>
                             <a class="site-page child" href="/music/">
                                 <i class="fas fa-music"></i>
                                 <span> 音乐</span>
@@ -248,11 +327,33 @@
             
                 
                 <div class="back-menu-list">
+                    <a class="back-menu-item" href="/home/" rel="external nofollow"
+                        title="主页">
+                        <img class="back-menu-item-icon" src="/img/avatar.webp" loading="lazy">
+                        <span class="back-menu-item-text">
+                            主页
+                        </span>
+                    </a>
+                </div>
+            
+                
+                <div class="back-menu-list">
                     <a class="back-menu-item" href="/" rel="external nofollow"
                         title="博客">
                         <img class="back-menu-item-icon" src="/img/avatar.webp" loading="lazy">
                         <span class="back-menu-item-text">
                             博客
+                        </span>
+                    </a>
+                </div>
+            
+                
+                <div class="back-menu-list">
+                    <a class="back-menu-item" href="/plog/" rel="external nofollow"
+                        title="图片博客">
+                        <img class="back-menu-item-icon" src="/img/avatar.webp" loading="lazy">
+                        <span class="back-menu-item-text">
+                            图片博客
                         </span>
                     </a>
                 </div>
@@ -356,13 +457,6 @@
                         </li>
                     
                         <li>
-                            <a class="site-page child" href="/cinemas/">
-                                <i class="fas fa-clapperboard"></i>
-                                <span> 追剧</span>
-                            </a>
-                        </li>
-                    
-                        <li>
                             <a class="site-page child" href="/music/">
                                 <i class="fas fa-music"></i>
                                 <span> 音乐</span>
@@ -435,7 +529,7 @@
 	<div class="author-info">
 		<div class="author-tag-left"><span class="author-tag">🤖️ 数码科技爱好者</span><span class="author-tag">🔍
 				分享与热心帮助</span><span class="author-tag">🏠 智能家居小能手</span><span class="author-tag">🔨 设计开发一条龙</span></div>
-		<div class="author-img"><img src="https://p.zhheo.com/2023ab4befd994d9bc8e1e6a78027d517e21075402.png!cover"
+		<div class="author-img"><img src="/img/avatar.webp"
 				data-ll-status="loaded" class="entered loaded"></div>
 		<div class="author-tag-right"> <span class="author-tag">专修交互与设计 🤝</span><span class="author-tag">脚踏实地行动派
 				🏃</span><span class="author-tag">团队小组发动机 🧱</span><span class="author-tag">壮汉人狠话不多 💢</span></div>
@@ -755,23 +849,31 @@
 				<div class="author-content-item-tips">生涯</div><span class="author-content-item-title">无限进步</span>
 				<div class="careers-group">
 					<div class="careers-item">
-						<div class="circle" style="background: #357ef5"></div>
+						<div class="circle" style="background: #002fa7"></div>
 						<div class="name">Python工程师</div>
 					</div>
+					<div class="careers-item">
+						<div class="circle" style="background: #eb372a"></div>
+						<div class="name">网络爬虫</div>
+					</div>
+					<div class="careers-item">
+						<div class="circle" style="background: #4c8dae"></div>
+						<div class="name">自动化</div>
+					</div>
 				</div><img class="author-content-img"
-					src="https://p.zhheo.com/20236d5152f4058d0b8b29185c7b71bbd74a071902.png!cover" alt="生涯">
+					src="/img/icon/Python.png" alt="生涯">
 			</div>
 		</div>
 	</div>
 	<div class="author-content">
 		<div class="author-content-item personalities">
-			<div class="author-content-item-tips">性格</div><span class="author-content-item-title">守卫者</span>
-			<div class="title2" style="color: #56a178;">ISFJ-T</div>
-			<div class="image"><img src="/img/ISFJ-T.svg" data-ll-status="loading"></div>
+			<div class="author-content-item-tips">性格</div><span class="author-content-item-title">探险家</span>
+			<div class="title2" style="color: #56a178;">ISFP-T</div>
+			<div class="image"><img src="/img/ISFP-T.webp" data-ll-status="loading" class="entered loading"></div>
 			<div class="post-tips">在 <a href="https://www.16personalities.com/" target="_blank"
 					rel="noopener nofollow">16personalities</a> 了解更多关于 <a target="_blank"
 					rel="noopener external nofollow"
-					href="https://www.16personalities.com/ch/ISFJ-%E4%BA%BA%E6%A0%BC">守卫者</a></div>
+					href="https://www.16personalities.com/ch/ISFP-%E4%BA%BA%E6%A0%BC">探险家</a></div>
 		</div>
 		<div class="author-content-item myphoto"><img class="author-content-img"
 				src="/img/avatar.webp" alt="自拍"></div>
@@ -808,6 +910,8 @@
 				</div>
 			</div>
 		</div>
+	</div>
+	<div class="author-content">
 		<div class="author-content-item anime-yourname">
 			<div class="card-content">
 				<div class="author-content-item-tips">热爱动漫</div><span class="author-content-item-title">君の名は。</span>
@@ -816,6 +920,18 @@
 		<div class="author-content-item anime-tsov">
 			<div class="card-content">
 				<div class="author-content-item-tips">热爱动漫</div><span class="author-content-item-title">聲の形</span>
+			</div>
+		</div>
+	</div>
+	<div class="author-content">
+		<div class="author-content-item novel-mdzs">
+			<div class="card-content">
+				<div class="author-content-item-tips">热爱小说</div><span class="author-content-item-title">魔道祖师</span>
+			</div>
+		</div>
+		<div class="author-content-item novel-tgcf">
+			<div class="card-content">
+				<div class="author-content-item-tips">热爱小说</div><span class="author-content-item-title">天官赐福</span>
 			</div>
 		</div>
 	</div>
@@ -927,7 +1043,7 @@
 
 
              
-                
+            
     </div>
        
 </main>     
@@ -975,13 +1091,14 @@
             <div id="footer-banner-tips">
                 <div class="copyright">©2022 - 2023 By 
                     <a class="footer-banner-link" href="/" rel="external nofollow">天子笑</a>
+                    <a class="footer-banner-link" href="https://github.com/hexo-theme-Acrylic/Hexo-Theme-Acrylic-Next" rel="external nofollow" target="_blank"> Theme By Acrylic-Next</a>
                 </div>
             </div>
         </div>
         <div class="footer-banner-right">
             <a class="footer-banner-link" href="/rss/">订阅</a>
             
-                <a class="footer-banner-link" target="_blank" href="https://beian.miit.gov.cn/#/Integrated/index" rel="noopener external nofollow noreferrer noopener">
+                <a class="footer-banner-link" target="_blank" href="https://icp.gov.moe/?keyword=20224131" rel="noopener external nofollow noreferrer noopener">
                     萌ICP备20224131号
                 </a>
             
@@ -993,7 +1110,7 @@
 </div>
                 </footer>
             </div>
-           
+         
         <div>
     <script type="text/javascript" src="/js/utils.js"></script>
     <script type="text/javascript" src="/js/main.js"></script>
@@ -1023,6 +1140,9 @@
      
 </div>
 
+<script src="/js/extend/covercolor.js"></script>
+
+
     <script>
   let pjaxSelectors = [
     'title',
@@ -1048,6 +1168,8 @@
 </script>
     
 </div>
+        
+       
     
       <div id="sakana" style="position:fixed;right:0;bottom:0px;"></div>
       <script async onload='initSakanaWidget({"character":"takina","enable":true,"enable_mobile":200,"size":100,"autoFit":false,"bottom":"0px","controls":false,"stroke":{"color":"#b4b4b4","width":10},"threshold":0.1,"rotate":0,"customCharacters":[]})' src="https://cdn.jsdelivr.net/npm/sakana-widget@2.3.0/lib/sakana.min.js"></script>

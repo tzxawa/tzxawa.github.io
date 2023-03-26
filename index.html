@@ -32,7 +32,8 @@
 
 
 
-<script>var GOBALCONFIG = {"root":"/","runtime":"2022-10-01 00:00:00","lazyload":{"enable":false,"error":"/img/acrylic.png"},"lightbox":true,"randomlinks":false,"lang":{"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"recent":"最近","yesterday":"昨天","berforeyesterday":"前天","daybefore":"天前","runtime":"天"},"sayhello":{"morning":"早上好","noon":"中午好","afternoon":"下午好","night":"晚上好","goodnight":"晚安","iam":"!  我是"}}};</script><script id="site-config">var PAGECONFIG = {"is_home":true,"is_post":false,"is_page":false,"comment":false,"page":false,"toc":false};</script>
+
+<script>var GLOBALCONFIG = {"root":"/","runtime":"2022-10-01 00:00:00","lazyload":{"enable":false,"error":"/img/acrylic.png"},"lightbox":true,"randomlinks":false,"lang":{"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"recent":"最近","yesterday":"昨天","berforeyesterday":"前天","daybefore":"天前","runtime":"天"},"sayhello":{"morning":"早上好","noon":"中午好","afternoon":"下午好","night":"晚上好","goodnight":"晚安","iam":"!  我是"},"search":{"empty":"搜索结果为空","hit":"已为您找到 ${query} 条结果","placeholder":"输入关键词快速查找"}},"covercolor":false};</script><script id="site-config">var PAGECONFIG = {"is_home":true,"is_post":false,"is_page":false,"page":false};</script>
     <meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="天子笑" type="application/atom+xml">
 </head>
     <body id="body">
@@ -59,6 +60,69 @@
     document.addEventListener('pjax:send', () => { preloader.initLoading() })
     document.addEventListener('pjax:complete', () => { preloader.endLoading() })
 </script>
+<style>
+    #loading-box {
+        -webkit-user-select: none;
+    }
+
+    #loading-box .loading-bg {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background: var(--heo-background);
+        z-index: 1999;
+        opacity: 1;
+        transition: 0.2s;
+        pointer-events: all;
+        animation: showLoading 0.3s 0s backwards;
+    }
+
+    #loading-box.loaded .loading-bg {
+        pointer-events: none;
+        transition: 0.2s;
+        animation: hideLoading 0.3s 0s forwards;
+    }
+
+    #loading-box .loading-img {
+        width: 100px;
+        margin: auto;
+        animation-duration: 0.2s;
+        animation-name: loadingAction;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    @keyframes loadingAction {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0.6;
+        }
+    }
+
+    @keyframes hideLoading {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+
+    @keyframes showLoading {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+</style>
         
         <div id="console" style="zoom: 1;" class="">
     <div class="close-btn" onclick="acrylic.hideConsole()" href="javascript:void(0);">
@@ -97,11 +161,33 @@
             
                 
                 <div class="back-menu-list">
+                    <a class="back-menu-item" href="/home/" rel="external nofollow"
+                        title="主页">
+                        <img class="back-menu-item-icon" src="/img/avatar.webp" loading="lazy">
+                        <span class="back-menu-item-text">
+                            主页
+                        </span>
+                    </a>
+                </div>
+            
+                
+                <div class="back-menu-list">
                     <a class="back-menu-item" href="/" rel="external nofollow"
                         title="博客">
                         <img class="back-menu-item-icon" src="/img/avatar.webp" loading="lazy">
                         <span class="back-menu-item-text">
                             博客
+                        </span>
+                    </a>
+                </div>
+            
+                
+                <div class="back-menu-list">
+                    <a class="back-menu-item" href="/plog/" rel="external nofollow"
+                        title="图片博客">
+                        <img class="back-menu-item-icon" src="/img/avatar.webp" loading="lazy">
+                        <span class="back-menu-item-text">
+                            图片博客
                         </span>
                     </a>
                 </div>
@@ -192,13 +278,6 @@
                         </li>
                     
                         <li>
-                            <a class="site-page child" href="/cinemas/">
-                                <i class="fas fa-clapperboard"></i>
-                                <span> 追剧</span>
-                            </a>
-                        </li>
-                    
-                        <li>
                             <a class="site-page child" href="/music/">
                                 <i class="fas fa-music"></i>
                                 <span> 音乐</span>
@@ -248,11 +327,33 @@
             
                 
                 <div class="back-menu-list">
+                    <a class="back-menu-item" href="/home/" rel="external nofollow"
+                        title="主页">
+                        <img class="back-menu-item-icon" src="/img/avatar.webp" loading="lazy">
+                        <span class="back-menu-item-text">
+                            主页
+                        </span>
+                    </a>
+                </div>
+            
+                
+                <div class="back-menu-list">
                     <a class="back-menu-item" href="/" rel="external nofollow"
                         title="博客">
                         <img class="back-menu-item-icon" src="/img/avatar.webp" loading="lazy">
                         <span class="back-menu-item-text">
                             博客
+                        </span>
+                    </a>
+                </div>
+            
+                
+                <div class="back-menu-list">
+                    <a class="back-menu-item" href="/plog/" rel="external nofollow"
+                        title="图片博客">
+                        <img class="back-menu-item-icon" src="/img/avatar.webp" loading="lazy">
+                        <span class="back-menu-item-text">
+                            图片博客
                         </span>
                     </a>
                 </div>
@@ -352,13 +453,6 @@
                             <a class="site-page child" href="/bangumis/">
                                 <i class="fab fa-bilibili"></i>
                                 <span> 追番</span>
-                            </a>
-                        </li>
-                    
-                        <li>
-                            <a class="site-page child" href="/cinemas/">
-                                <i class="fas fa-clapperboard"></i>
-                                <span> 追剧</span>
                             </a>
                         </li>
                     
@@ -746,8 +840,8 @@
 </div>
 <main class="layout" id="content-inner">
     <div class="recent-posts" id="recent-posts">
-    <div id="category-bar">
-        <div class="category-bar-items" id="category-bar-items">
+        <div id="category-bar">
+            <div class="category-bar-items" id="category-bar-items">
     <div class="category-bar-item select" id="category-bar-home">
         <a href="/">首页</a>
     </div>
@@ -755,9 +849,9 @@
 </div>
 <a class="category-bar-more" href="/categories/">更多</a>
 
-    </div>
-    
-        <div class="recent-post-item" onclick="pjax.loadUrl('/6173e0a4dab8.html')">
+        </div>
+        
+            <div class="recent-post-item" onclick="pjax.loadUrl('/6173e0a4dab8.html')">
     <div class="post_cover left_radius">
         <a href="/6173e0a4dab8.html" title="Hello World">
             <img class="post_bg" alt="Hello World" src="/img/hello.jpg">
@@ -782,16 +876,19 @@
         </div>
     </div>
 </div>
-    
-    <nav id="pagination">
+        
+        <nav id="pagination">
     <div class="pagination">
         
         <span class="page-number current">1</span>
     </div>
 </nav>
-</div>
+    </div>
     <div class="aside-content" id="aside-content">
-    <div class="card-widget card-info">
+    
+    
+        
+        <div class="card-widget card-info">
     <div class="card-content">
         <div class="card-info-avatar is-center">
             <div class="author-info__sayhi" id="author-info__sayhi">
@@ -820,18 +917,35 @@
         
     </div>
 </div>
-    <!-- <div class="card-widget heo-right-widget" id="card-wechat" onclick="window.open('/wechat/')">
-        <div id="flip-wrapper">
-            <div id="flip-content">
-                <div class="face"></div>
-                <div class="back face"></div>
+     
+    
+        
+        <div class="card-widget heo-right-widget" id="card-wechat" style="background: #0099FF ;">
+    <div id="flip-wrapper">
+        <div id="flip-content">
+            <div class="face">
+                <div class="left">
+                    <span class="title">QQ群</span>
+                    <span class="desc">加入官方QQ群与我们交流 <i class="fa-solid fa-play"></i></span>
+                </div>
+            </div>
+            <div class="back face">
+                <div class="left">
+                    <span class="title">扫一扫</span>
+                    <span class="desc">获取最新信息和帮助 <i class="fa-solid fa-play"></i></span>
+                </div>
+                <img class="nolazyload" src="/img/avatar.webp">
             </div>
         </div>
-    </div> -->
-    <div class="sticky_layout">
-        
+    </div>
+</div>
+     
     
-       <div class="card-widget card-recent-post">
+    <div class="sticky_layout">
+            
+        
+            
+        <div class="card-widget card-recent-post">
     <div class="item-headline">
         <i class="fas fa-list-ol"></i>
         <span>最近发布</span>
@@ -855,9 +969,11 @@
                 
         
     </div>
-</div> 
+</div>
+     
         
-    <div class="card-widget card-tags card-archives card-webinfo card-allinfo">
+            
+        <div class="card-widget card-tags card-archives card-webinfo card-allinfo">
     <div class="card-tag-cloud">
     
 </div>
@@ -871,36 +987,33 @@
         </li>
         
 </ul>
-
     <hr>
     <div class="webinfo">
-    <div class="webinfo-item">
-        <div class="webinfo-item-title">
-            <i class="item-icon fas fa-file-alt"></i>
-            <div class="item-name">文章总数 :</div>
-        </div>
-        <div class="item-count">1</div>
-    </div>
-    <div class="webinfo-item">
-        <div class="webinfo-item-title">
-            <i class="item-icon fas fa-stopwatch"></i>
-            <div class="item-name">建站天数 :</div>
-        </div>
-        <div class="item-count">169 天
-        </div>
-    </div>
     
         <div class="webinfo-item">
             <div class="webinfo-item-title">
-                <i class="item-icon fas fa-font"></i>
-                <div class="item-name">全站字数 :</div>
+                <i class="item-icon fas fa-file-alt"></i>
+                <div class="item-name">文章总数 :</div>
             </div>
-            <div class="item-count">75</div>
+            <div class="item-count">1</div>
         </div>
+    
+    
+        <div class="webinfo-item">
+            <div class="webinfo-item-title">
+                <i class="item-icon fas fa-stopwatch"></i>
+                <div class="item-name">建站天数 :</div>
+            </div>
+            <div class="item-count" id="runtimeshow">
+            </div>
+        </div>
+    
+    
     
 </div>
 </div>
-
+     
+        
     </div>
 </div> 
 </main>     
@@ -947,13 +1060,14 @@
             <div id="footer-banner-tips">
                 <div class="copyright">©2022 - 2023 By 
                     <a class="footer-banner-link" href="/" rel="external nofollow">天子笑</a>
+                    <a class="footer-banner-link" href="https://github.com/hexo-theme-Acrylic/Hexo-Theme-Acrylic-Next" rel="external nofollow" target="_blank"> Theme By Acrylic-Next</a>
                 </div>
             </div>
         </div>
         <div class="footer-banner-right">
             <a class="footer-banner-link" href="/rss/">订阅</a>
             
-                <a class="footer-banner-link" target="_blank" href="https://beian.miit.gov.cn/#/Integrated/index" rel="noopener external nofollow noreferrer noopener">
+                <a class="footer-banner-link" target="_blank" href="https://icp.gov.moe/?keyword=20224131" rel="noopener external nofollow noreferrer noopener">
                     萌ICP备20224131号
                 </a>
             
@@ -965,7 +1079,7 @@
 </div>
                 </footer>
             </div>
-           
+         
         <div>
     <script type="text/javascript" src="/js/utils.js"></script>
     <script type="text/javascript" src="/js/main.js"></script>
@@ -995,6 +1109,9 @@
      
 </div>
 
+<script src="/js/extend/covercolor.js"></script>
+
+
     <script>
   let pjaxSelectors = [
     'title',
@@ -1020,6 +1137,8 @@
 </script>
     
 </div>
+        
+       
     
       <div id="sakana" style="position:fixed;right:0;bottom:0px;"></div>
       <script async onload='initSakanaWidget({"character":"takina","enable":true,"enable_mobile":200,"size":100,"autoFit":false,"bottom":"0px","controls":false,"stroke":{"color":"#b4b4b4","width":10},"threshold":0.1,"rotate":0,"customCharacters":[]})' src="https://cdn.jsdelivr.net/npm/sakana-widget@2.3.0/lib/sakana.min.js"></script>

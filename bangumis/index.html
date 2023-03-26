@@ -32,7 +32,8 @@
 
 
 
-<script>var GOBALCONFIG = {"root":"/","runtime":"2022-10-01 00:00:00","lazyload":{"enable":false,"error":"/img/acrylic.png"},"lightbox":true,"randomlinks":false,"lang":{"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"recent":"最近","yesterday":"昨天","berforeyesterday":"前天","daybefore":"天前","runtime":"天"},"sayhello":{"morning":"早上好","noon":"中午好","afternoon":"下午好","night":"晚上好","goodnight":"晚安","iam":"!  我是"}}};</script><script id="site-config">var PAGECONFIG = {"is_home":false,"is_post":false,"is_page":false,"comment":false,"page":false,"toc":false};</script>
+
+<script>var GLOBALCONFIG = {"root":"/","runtime":"2022-10-01 00:00:00","lazyload":{"enable":false,"error":"/img/acrylic.png"},"lightbox":true,"randomlinks":false,"lang":{"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"recent":"最近","yesterday":"昨天","berforeyesterday":"前天","daybefore":"天前","runtime":"天"},"sayhello":{"morning":"早上好","noon":"中午好","afternoon":"下午好","night":"晚上好","goodnight":"晚安","iam":"!  我是"},"search":{"empty":"搜索结果为空","hit":"已为您找到 ${query} 条结果","placeholder":"输入关键词快速查找"}},"covercolor":false};</script><script id="site-config">var PAGECONFIG = {"is_home":false,"is_post":false,"is_page":false,"page":false};</script>
     <meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="天子笑" type="application/atom+xml">
 </head>
     <body id="body">
@@ -59,6 +60,69 @@
     document.addEventListener('pjax:send', () => { preloader.initLoading() })
     document.addEventListener('pjax:complete', () => { preloader.endLoading() })
 </script>
+<style>
+    #loading-box {
+        -webkit-user-select: none;
+    }
+
+    #loading-box .loading-bg {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background: var(--heo-background);
+        z-index: 1999;
+        opacity: 1;
+        transition: 0.2s;
+        pointer-events: all;
+        animation: showLoading 0.3s 0s backwards;
+    }
+
+    #loading-box.loaded .loading-bg {
+        pointer-events: none;
+        transition: 0.2s;
+        animation: hideLoading 0.3s 0s forwards;
+    }
+
+    #loading-box .loading-img {
+        width: 100px;
+        margin: auto;
+        animation-duration: 0.2s;
+        animation-name: loadingAction;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    @keyframes loadingAction {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0.6;
+        }
+    }
+
+    @keyframes hideLoading {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+
+    @keyframes showLoading {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+</style>
         
         <div id="console" style="zoom: 1;" class="">
     <div class="close-btn" onclick="acrylic.hideConsole()" href="javascript:void(0);">
@@ -97,11 +161,33 @@
             
                 
                 <div class="back-menu-list">
+                    <a class="back-menu-item" href="/home/" rel="external nofollow"
+                        title="主页">
+                        <img class="back-menu-item-icon" src="/img/avatar.webp" loading="lazy">
+                        <span class="back-menu-item-text">
+                            主页
+                        </span>
+                    </a>
+                </div>
+            
+                
+                <div class="back-menu-list">
                     <a class="back-menu-item" href="/" rel="external nofollow"
                         title="博客">
                         <img class="back-menu-item-icon" src="/img/avatar.webp" loading="lazy">
                         <span class="back-menu-item-text">
                             博客
+                        </span>
+                    </a>
+                </div>
+            
+                
+                <div class="back-menu-list">
+                    <a class="back-menu-item" href="/plog/" rel="external nofollow"
+                        title="图片博客">
+                        <img class="back-menu-item-icon" src="/img/avatar.webp" loading="lazy">
+                        <span class="back-menu-item-text">
+                            图片博客
                         </span>
                     </a>
                 </div>
@@ -192,13 +278,6 @@
                         </li>
                     
                         <li>
-                            <a class="site-page child" href="/cinemas/">
-                                <i class="fas fa-clapperboard"></i>
-                                <span> 追剧</span>
-                            </a>
-                        </li>
-                    
-                        <li>
                             <a class="site-page child" href="/music/">
                                 <i class="fas fa-music"></i>
                                 <span> 音乐</span>
@@ -248,11 +327,33 @@
             
                 
                 <div class="back-menu-list">
+                    <a class="back-menu-item" href="/home/" rel="external nofollow"
+                        title="主页">
+                        <img class="back-menu-item-icon" src="/img/avatar.webp" loading="lazy">
+                        <span class="back-menu-item-text">
+                            主页
+                        </span>
+                    </a>
+                </div>
+            
+                
+                <div class="back-menu-list">
                     <a class="back-menu-item" href="/" rel="external nofollow"
                         title="博客">
                         <img class="back-menu-item-icon" src="/img/avatar.webp" loading="lazy">
                         <span class="back-menu-item-text">
                             博客
+                        </span>
+                    </a>
+                </div>
+            
+                
+                <div class="back-menu-list">
+                    <a class="back-menu-item" href="/plog/" rel="external nofollow"
+                        title="图片博客">
+                        <img class="back-menu-item-icon" src="/img/avatar.webp" loading="lazy">
+                        <span class="back-menu-item-text">
+                            图片博客
                         </span>
                     </a>
                 </div>
@@ -356,13 +457,6 @@
                         </li>
                     
                         <li>
-                            <a class="site-page child" href="/cinemas/">
-                                <i class="fas fa-clapperboard"></i>
-                                <span> 追剧</span>
-                            </a>
-                        </li>
-                    
-                        <li>
                             <a class="site-page child" href="/music/">
                                 <i class="fas fa-music"></i>
                                 <span> 音乐</span>
@@ -447,20 +541,20 @@
 <div class="bangumi-tabs">
     <a class="bangumi-tab" id="bangumi-tab1" href="javascript:;" rel="external" target="_self" onclick="return false">
     想看
-    (70)</a>
+    (72)</a>
     <a class="bangumi-tab" id="bangumi-tab2" href="javascript:;" rel="external" target="_self" onclick="return false">
         在看
-        (4)</a>
+        (7)</a>
     <a class="bangumi-tab" id="bangumi-tab3" href="javascript:;" rel="external" target="_self" onclick="return false">
         已看
-        (14)</a>
+        (19)</a>
 </div>
 <div>
     <div id="bangumi-item1">
         
         
         <div class="bangumi-item">
-    <div class="bangumi-picture"><img src="https://cdn.jsdelivr.net/npm/hexo-bilibili-bangumi@1.2.0/lib/img/loading.gif"  data-src="https://i0.hdslb.com/bfs/bangumi/image/912236636250f84494cb6a6303c73be468c58525.png" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
+    <div class="bangumi-picture"><img src="https://i0.hdslb.com/bfs/bangumi/image/912236636250f84494cb6a6303c73be468c58525.png"  data-src="https://i0.hdslb.com/bfs/bangumi/image/912236636250f84494cb6a6303c73be468c58525.png" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
     </div>
     <div class="bangumi-info">
         <div class="bangumi-title">
@@ -480,16 +574,16 @@
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>833.1 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>871.6 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>39.0 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>39.4 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>3.3 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>3.4 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>2.5 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>2.6 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.8</em>
@@ -502,7 +596,7 @@
 
         
         <div class="bangumi-item">
-    <div class="bangumi-picture"><img src="https://cdn.jsdelivr.net/npm/hexo-bilibili-bangumi@1.2.0/lib/img/loading.gif"  data-src="https://i0.hdslb.com/bfs/bangumi/image/d9d6284e0919ecfda41981c1f9119f993db62935.jpg" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
+    <div class="bangumi-picture"><img src="https://i0.hdslb.com/bfs/bangumi/image/d9d6284e0919ecfda41981c1f9119f993db62935.jpg"  data-src="https://i0.hdslb.com/bfs/bangumi/image/d9d6284e0919ecfda41981c1f9119f993db62935.jpg" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
     </div>
     <div class="bangumi-info">
         <div class="bangumi-title">
@@ -522,16 +616,16 @@
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>8808.8 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>8950.4 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>253.7 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>256.8 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>92.8 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>94.3 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>52.9 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>53.4 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.9</em>
@@ -544,7 +638,7 @@
 
         
         <div class="bangumi-item">
-    <div class="bangumi-picture"><img src="https://cdn.jsdelivr.net/npm/hexo-bilibili-bangumi@1.2.0/lib/img/loading.gif"  data-src="https://i0.hdslb.com/bfs/bangumi/f1146494f45cc2c4a3fa0d081c5ecf4bc3147442.jpg" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
+    <div class="bangumi-picture"><img src="https://i0.hdslb.com/bfs/bangumi/f1146494f45cc2c4a3fa0d081c5ecf4bc3147442.jpg"  data-src="https://i0.hdslb.com/bfs/bangumi/f1146494f45cc2c4a3fa0d081c5ecf4bc3147442.jpg" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
     </div>
     <div class="bangumi-info">
         <div class="bangumi-title">
@@ -564,16 +658,16 @@
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>6785.0 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>6806.7 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>360.7 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>361.4 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>29.0 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>29.1 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>282.2 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>282.3 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.5</em>
@@ -586,7 +680,7 @@
 
         
         <div class="bangumi-item">
-    <div class="bangumi-picture"><img src="https://cdn.jsdelivr.net/npm/hexo-bilibili-bangumi@1.2.0/lib/img/loading.gif"  data-src="https://i0.hdslb.com/bfs/bangumi/170a15388a44a826c0e0afb4644b81fba981590a.jpg" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
+    <div class="bangumi-picture"><img src="https://i0.hdslb.com/bfs/bangumi/170a15388a44a826c0e0afb4644b81fba981590a.jpg"  data-src="https://i0.hdslb.com/bfs/bangumi/170a15388a44a826c0e0afb4644b81fba981590a.jpg" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
     </div>
     <div class="bangumi-info">
         <div class="bangumi-title">
@@ -606,7 +700,7 @@
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>37.2 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>37.3 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
                     <span class="bangumi-info-label">追番人数</span> <em>4.0 万</em>
@@ -628,7 +722,7 @@
 
         
         <div class="bangumi-item">
-    <div class="bangumi-picture"><img src="https://cdn.jsdelivr.net/npm/hexo-bilibili-bangumi@1.2.0/lib/img/loading.gif"  data-src="https://i0.hdslb.com/bfs/bangumi/cbb20ee03e97a9f3ad2e1506a10fd1271f1c584a.jpg" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
+    <div class="bangumi-picture"><img src="https://i0.hdslb.com/bfs/bangumi/cbb20ee03e97a9f3ad2e1506a10fd1271f1c584a.jpg"  data-src="https://i0.hdslb.com/bfs/bangumi/cbb20ee03e97a9f3ad2e1506a10fd1271f1c584a.jpg" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
     </div>
     <div class="bangumi-info">
         <div class="bangumi-title">
@@ -651,13 +745,13 @@
                     <span class="bangumi-info-label">总播放</span> <em>7.9 亿</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>662.2 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>662.6 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>248.0 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>248.2 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>1041.9 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>1042.1 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.5</em>
@@ -670,7 +764,7 @@
 
         
         <div class="bangumi-item">
-    <div class="bangumi-picture"><img src="https://cdn.jsdelivr.net/npm/hexo-bilibili-bangumi@1.2.0/lib/img/loading.gif"  data-src="https://i0.hdslb.com/bfs/bangumi/af334241d73ff092c5d78d0c9ee9ad893592f9c4.jpg" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
+    <div class="bangumi-picture"><img src="https://i0.hdslb.com/bfs/bangumi/af334241d73ff092c5d78d0c9ee9ad893592f9c4.jpg"  data-src="https://i0.hdslb.com/bfs/bangumi/af334241d73ff092c5d78d0c9ee9ad893592f9c4.jpg" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
     </div>
     <div class="bangumi-info">
         <div class="bangumi-title">
@@ -693,13 +787,13 @@
                     <span class="bangumi-info-label">总播放</span> <em>2.1 亿</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>431.2 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>431.5 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
                     <span class="bangumi-info-label">硬币数</span> <em>49.3 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>206.0 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>206.1 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.3</em>
@@ -712,7 +806,7 @@
 
         
         <div class="bangumi-item">
-    <div class="bangumi-picture"><img src="https://cdn.jsdelivr.net/npm/hexo-bilibili-bangumi@1.2.0/lib/img/loading.gif"  data-src="https://i0.hdslb.com/bfs/bangumi/f4e355ac82b4508e26f1883e92320879151453a7.jpg" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
+    <div class="bangumi-picture"><img src="https://i0.hdslb.com/bfs/bangumi/f4e355ac82b4508e26f1883e92320879151453a7.jpg"  data-src="https://i0.hdslb.com/bfs/bangumi/f4e355ac82b4508e26f1883e92320879151453a7.jpg" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
     </div>
     <div class="bangumi-info">
         <div class="bangumi-title">
@@ -735,13 +829,13 @@
                     <span class="bangumi-info-label">总播放</span> <em>4.3 亿</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>470.6 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>470.8 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>102.9 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>103.1 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>571.9 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>572.1 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.5</em>
@@ -755,7 +849,7 @@
 
         
         <div class="bangumi-item">
-    <div class="bangumi-picture"><img src="https://cdn.jsdelivr.net/npm/hexo-bilibili-bangumi@1.2.0/lib/img/loading.gif"  data-src="https://i0.hdslb.com/bfs/bangumi/image/8d1200b8c8b795dd3a7baae33afcec42fbd1947c.png" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
+    <div class="bangumi-picture"><img src="https://i0.hdslb.com/bfs/bangumi/image/8d1200b8c8b795dd3a7baae33afcec42fbd1947c.png"  data-src="https://i0.hdslb.com/bfs/bangumi/image/8d1200b8c8b795dd3a7baae33afcec42fbd1947c.png" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
     </div>
     <div class="bangumi-info">
         <div class="bangumi-title">
@@ -778,13 +872,13 @@
                     <span class="bangumi-info-label">总播放</span> <em>1.1 亿</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>486.8 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>487.5 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>57.2 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>57.4 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>556.1 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>556.3 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.7</em>
@@ -797,7 +891,7 @@
 
         
         <div class="bangumi-item">
-    <div class="bangumi-picture"><img src="https://cdn.jsdelivr.net/npm/hexo-bilibili-bangumi@1.2.0/lib/img/loading.gif"  data-src="https://i0.hdslb.com/bfs/bangumi/image/8844c9bea1c5ff2371b47181785084c9650a1402.png" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
+    <div class="bangumi-picture"><img src="https://i0.hdslb.com/bfs/bangumi/image/8844c9bea1c5ff2371b47181785084c9650a1402.png"  data-src="https://i0.hdslb.com/bfs/bangumi/image/8844c9bea1c5ff2371b47181785084c9650a1402.png" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
     </div>
     <div class="bangumi-info">
         <div class="bangumi-title">
@@ -820,13 +914,13 @@
                     <span class="bangumi-info-label">总播放</span> <em>1.6 亿</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>358.8 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>359.2 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>108.0 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>108.2 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>367.0 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>367.2 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.8</em>
@@ -839,7 +933,7 @@
 
         
         <div class="bangumi-item">
-    <div class="bangumi-picture"><img src="https://cdn.jsdelivr.net/npm/hexo-bilibili-bangumi@1.2.0/lib/img/loading.gif"  data-src="https://i0.hdslb.com/bfs/bangumi/3e688cd89f778968bdf6f6d9ca6f3d20b76f04ea.jpg" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
+    <div class="bangumi-picture"><img src="https://i0.hdslb.com/bfs/bangumi/3e688cd89f778968bdf6f6d9ca6f3d20b76f04ea.jpg"  data-src="https://i0.hdslb.com/bfs/bangumi/3e688cd89f778968bdf6f6d9ca6f3d20b76f04ea.jpg" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
     </div>
     <div class="bangumi-info">
         <div class="bangumi-title">
@@ -859,16 +953,16 @@
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>8598.2 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>8618.7 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>388.2 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>389.0 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>108.7 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>108.9 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>288.3 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>288.4 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.7</em>
@@ -893,49 +987,7 @@
         
         
         <div class="bangumi-item">
-    <div class="bangumi-picture"><img src="https://cdn.jsdelivr.net/npm/hexo-bilibili-bangumi@1.2.0/lib/img/loading.gif"  data-src="https://i0.hdslb.com/bfs/bangumi/image/cfa557d1ff951c9038b6cf42d335a6bdac499033.png" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
-    </div>
-    <div class="bangumi-info">
-        <div class="bangumi-title">
-            <a target="_blank" href="https://www.bilibili.com/bangumi/media/md28480899/">擁有超常技能的異世界流浪美食家（僅限港澳台地區）</a>
-        </div>
-        <div class="bangumi-meta">
-            <span class="bangumi-info-items" >
-                <span class="bangumi-info-item">
-                
-                <span class="bangumi-info-total">全12话</span><em
-                        class="bangumi-info-label-em">0</em>
-                </span>
-                
-                
-                <span class="bangumi-info-item bangumi-area">
-                    <span class="bangumi-info-label">番剧</span> <em>日本</em>
-                </span>
-                
-                <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>74.2 万</em>
-                </span>
-                <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>4.2 万</em>
-                </span>
-                <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>4436</em>
-                </span>
-                <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>1.1 万</em>
-                </span>
-                <span class="bangumi-info-item bangumi-info-item-score">
-                    <span class="bangumi-info-label">评分</span> <em>-</em>
-                </span>
-            </span>
-        </div>
-        <div class="bangumi-comments" ><p>简介：向田剛志（穆寇達）從現代日本被召喚到劍與魔法的異世界裡去了。本來還以為會有什麼大冒險在等著，結果自己只是個被牽連進「勇者召喚」儀式的一般人！與真正的勇者（有 3 個人！）比起來，穆寇達的初始能力值實在...</p> </div>
-    </div>
-</div>
-
-        
-        <div class="bangumi-item">
-    <div class="bangumi-picture"><img src="https://cdn.jsdelivr.net/npm/hexo-bilibili-bangumi@1.2.0/lib/img/loading.gif"  data-src="https://i0.hdslb.com/bfs/bangumi/image/7ada5eba46ebfdb657c8bfb20c0eab716d57cf75.png" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
+    <div class="bangumi-picture"><img src="https://i0.hdslb.com/bfs/bangumi/image/7ada5eba46ebfdb657c8bfb20c0eab716d57cf75.png"  data-src="https://i0.hdslb.com/bfs/bangumi/image/7ada5eba46ebfdb657c8bfb20c0eab716d57cf75.png" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
     </div>
     <div class="bangumi-info">
         <div class="bangumi-title">
@@ -955,16 +1007,16 @@
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>58.8 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>65.4 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>3.2 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>3.3 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>2086</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>2399</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>8672</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>9667</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>-</em>
@@ -977,7 +1029,177 @@
 
         
         <div class="bangumi-item">
-    <div class="bangumi-picture"><img src="https://cdn.jsdelivr.net/npm/hexo-bilibili-bangumi@1.2.0/lib/img/loading.gif"  data-src="https://i0.hdslb.com/bfs/bangumi/image/58ba200c4205e00cf662800f942d547270dc1f91.png" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
+    <div class="bangumi-picture"><img src="https://i0.hdslb.com/bfs/bangumi/image/eb26e2dc7d01ad121b4a2b3b5642d1138ab09caf.jpg"  data-src="https://i0.hdslb.com/bfs/bangumi/image/eb26e2dc7d01ad121b4a2b3b5642d1138ab09caf.jpg" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
+    </div>
+    <div class="bangumi-info">
+        <div class="bangumi-title">
+            <a target="_blank" href="https://www.bilibili.com/bangumi/media/md20144567/">名侦探柯南：犯人犯泽先生</a>
+        </div>
+        <div class="bangumi-meta">
+            <span class="bangumi-info-items" >
+                <span class="bangumi-info-item">
+                
+                <span class="bangumi-info-total">全12话</span><em
+                        class="bangumi-info-label-em">0</em>
+                </span>
+                
+                
+                <span class="bangumi-info-item bangumi-area">
+                    <span class="bangumi-info-label">番剧</span> <em>日本</em>
+                </span>
+                
+                <span class="bangumi-info-item bangumi-play">
+                    <span class="bangumi-info-label">总播放</span> <em>8.5 万</em>
+                </span>
+                <span class="bangumi-info-item bangumi-follow">
+                    <span class="bangumi-info-label">追番人数</span> <em>458.0 万</em>
+                </span>
+                <span class="bangumi-info-item bangumi-coin">
+                    <span class="bangumi-info-label">硬币数</span> <em>179</em>
+                </span>
+                <span class="bangumi-info-item bangumi-danmaku">
+                    <span class="bangumi-info-label">弹幕总数</span> <em>49</em>
+                </span>
+                <span class="bangumi-info-item bangumi-info-item-score">
+                    <span class="bangumi-info-label">评分</span> <em>-</em>
+                </span>
+            </span>
+        </div>
+        <div class="bangumi-comments" ><p>简介：《名侦探柯南：犯人犯泽先生》改编自同名漫画。该动画的主人公犯人犯泽先生身穿紧身服、全身漆黑。为了收拾某个人，他拼命打工赚钱，攒够钱后，他告别母亲，独自离开老家岛根县的出云，来到犯罪率极高的米花町准备复...</p> </div>
+    </div>
+</div>
+
+        
+        <div class="bangumi-item">
+    <div class="bangumi-picture"><img src="https://i0.hdslb.com/bfs/bangumi/image/2b2ed5dacd941de18911b1adbb607c2b54dafaac.png"  data-src="https://i0.hdslb.com/bfs/bangumi/image/2b2ed5dacd941de18911b1adbb607c2b54dafaac.png" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
+    </div>
+    <div class="bangumi-info">
+        <div class="bangumi-title">
+            <a target="_blank" href="https://www.bilibili.com/bangumi/media/md20140758/">辉夜大小姐想让我告白 剧场版</a>
+        </div>
+        <div class="bangumi-meta">
+            <span class="bangumi-info-items" >
+                <span class="bangumi-info-item">
+                
+                <span class="bangumi-info-total">全4话</span><em
+                        class="bangumi-info-label-em">0</em>
+                </span>
+                
+                
+                <span class="bangumi-info-item bangumi-area">
+                    <span class="bangumi-info-label">番剧</span> <em>日本</em>
+                </span>
+                
+                <span class="bangumi-info-item bangumi-play">
+                    <span class="bangumi-info-label">总播放</span> <em>46.3 万</em>
+                </span>
+                <span class="bangumi-info-item bangumi-follow">
+                    <span class="bangumi-info-label">追番人数</span> <em>990.1 万</em>
+                </span>
+                <span class="bangumi-info-item bangumi-coin">
+                    <span class="bangumi-info-label">硬币数</span> <em>4363</em>
+                </span>
+                <span class="bangumi-info-item bangumi-danmaku">
+                    <span class="bangumi-info-label">弹幕总数</span> <em>844</em>
+                </span>
+                <span class="bangumi-info-item bangumi-info-item-score">
+                    <span class="bangumi-info-label">评分</span> <em>-</em>
+                </span>
+            </span>
+        </div>
+        <div class="bangumi-comments" ><p>简介：在秀知院学园的学生会里，副会长四宫辉夜和会长白银御行相识了。两位天才在经历了漫长的恋爱头脑战之后，终于都明白了对方的心意，并在“奉心祭”上第一次接吻。
+但是，两人都没有做出明确的表白，本以为会成为一对...</p> </div>
+    </div>
+</div>
+
+        
+        <div class="bangumi-item">
+    <div class="bangumi-picture"><img src="https://i0.hdslb.com/bfs/bangumi/image/d250c87744420f66d8600aab112e7245ff90b0af.png"  data-src="https://i0.hdslb.com/bfs/bangumi/image/d250c87744420f66d8600aab112e7245ff90b0af.png" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
+    </div>
+    <div class="bangumi-info">
+        <div class="bangumi-title">
+            <a target="_blank" href="https://www.bilibili.com/bangumi/media/md20140628/">国王排名 勇气的宝箱</a>
+        </div>
+        <div class="bangumi-meta">
+            <span class="bangumi-info-items" >
+                <span class="bangumi-info-item">
+                
+                <span class="bangumi-info-total">全10话</span><em
+                        class="bangumi-info-label-em">0</em>
+                </span>
+                
+                
+                <span class="bangumi-info-item bangumi-area">
+                    <span class="bangumi-info-label">番剧</span> <em>日本</em>
+                </span>
+                
+                <span class="bangumi-info-item bangumi-play">
+                    <span class="bangumi-info-label">总播放</span> <em>24.9 万</em>
+                </span>
+                <span class="bangumi-info-item bangumi-follow">
+                    <span class="bangumi-info-label">追番人数</span> <em>907.6 万</em>
+                </span>
+                <span class="bangumi-info-item bangumi-coin">
+                    <span class="bangumi-info-label">硬币数</span> <em>440</em>
+                </span>
+                <span class="bangumi-info-item bangumi-danmaku">
+                    <span class="bangumi-info-label">弹幕总数</span> <em>208</em>
+                </span>
+                <span class="bangumi-info-item bangumi-info-item-score">
+                    <span class="bangumi-info-label">评分</span> <em>-</em>
+                </span>
+            </span>
+        </div>
+        <div class="bangumi-comments" ><p>简介：《国王排名》讲述的是一位弱小的聋哑王子·波吉和他的挚友·卡克的冒险故事。
+本次动画化的《国王排名 勇气的宝箱》，将展现前作第23集「国王与太阳」中未能展现的角色的崭新一面，讲述波吉、卡克及其同伴们那不...</p> </div>
+    </div>
+</div>
+
+        
+        <div class="bangumi-item">
+    <div class="bangumi-picture"><img src="https://i0.hdslb.com/bfs/bangumi/image/cfa557d1ff951c9038b6cf42d335a6bdac499033.png"  data-src="https://i0.hdslb.com/bfs/bangumi/image/cfa557d1ff951c9038b6cf42d335a6bdac499033.png" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
+    </div>
+    <div class="bangumi-info">
+        <div class="bangumi-title">
+            <a target="_blank" href="https://www.bilibili.com/bangumi/media/md28480899/">擁有超常技能的異世界流浪美食家（僅限港澳台地區）</a>
+        </div>
+        <div class="bangumi-meta">
+            <span class="bangumi-info-items" >
+                <span class="bangumi-info-item">
+                
+                <span class="bangumi-info-total">全12话</span><em
+                        class="bangumi-info-label-em">0</em>
+                </span>
+                
+                
+                <span class="bangumi-info-item bangumi-area">
+                    <span class="bangumi-info-label">番剧</span> <em>日本</em>
+                </span>
+                
+                <span class="bangumi-info-item bangumi-play">
+                    <span class="bangumi-info-label">总播放</span> <em>84.1 万</em>
+                </span>
+                <span class="bangumi-info-item bangumi-follow">
+                    <span class="bangumi-info-label">追番人数</span> <em>4.3 万</em>
+                </span>
+                <span class="bangumi-info-item bangumi-coin">
+                    <span class="bangumi-info-label">硬币数</span> <em>4824</em>
+                </span>
+                <span class="bangumi-info-item bangumi-danmaku">
+                    <span class="bangumi-info-label">弹幕总数</span> <em>1.3 万</em>
+                </span>
+                <span class="bangumi-info-item bangumi-info-item-score">
+                    <span class="bangumi-info-label">评分</span> <em>-</em>
+                </span>
+            </span>
+        </div>
+        <div class="bangumi-comments" ><p>简介：向田剛志（穆寇達）從現代日本被召喚到劍與魔法的異世界裡去了。本來還以為會有什麼大冒險在等著，結果自己只是個被牽連進「勇者召喚」儀式的一般人！與真正的勇者（有 3 個人！）比起來，穆寇達的初始能力值實在...</p> </div>
+    </div>
+</div>
+
+        
+        <div class="bangumi-item">
+    <div class="bangumi-picture"><img src="https://i0.hdslb.com/bfs/bangumi/image/58ba200c4205e00cf662800f942d547270dc1f91.png"  data-src="https://i0.hdslb.com/bfs/bangumi/image/58ba200c4205e00cf662800f942d547270dc1f91.png" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
     </div>
     <div class="bangumi-info">
         <div class="bangumi-title">
@@ -997,16 +1219,16 @@
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>1755.1 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>1797.4 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>77.7 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>78.7 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>8.3 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>8.5 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>10.1 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>10.2 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.6</em>
@@ -1022,7 +1244,7 @@
 
         
         <div class="bangumi-item">
-    <div class="bangumi-picture"><img src="https://cdn.jsdelivr.net/npm/hexo-bilibili-bangumi@1.2.0/lib/img/loading.gif"  data-src="https://i0.hdslb.com/bfs/bangumi/9c3e77244687a81e4b75e88ec22eeb8dbaa26380.jpg" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
+    <div class="bangumi-picture"><img src="https://i0.hdslb.com/bfs/bangumi/9c3e77244687a81e4b75e88ec22eeb8dbaa26380.jpg"  data-src="https://i0.hdslb.com/bfs/bangumi/9c3e77244687a81e4b75e88ec22eeb8dbaa26380.jpg" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
     </div>
     <div class="bangumi-info">
         <div class="bangumi-title">
@@ -1045,13 +1267,13 @@
                     <span class="bangumi-info-label">总播放</span> <em>1.8 亿</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>547.8 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>548.5 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>97.6 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>97.8 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>258.9 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>259.0 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.5</em>
@@ -1080,92 +1302,7 @@
         
         
         <div class="bangumi-item">
-    <div class="bangumi-picture"><img src="https://cdn.jsdelivr.net/npm/hexo-bilibili-bangumi@1.2.0/lib/img/loading.gif"  data-src="https://i0.hdslb.com/bfs/bangumi/image/9870f898b8a39bbb8048f34317f8d78a02cc1770.png" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
-    </div>
-    <div class="bangumi-info">
-        <div class="bangumi-title">
-            <a target="_blank" href="https://www.bilibili.com/bangumi/media/md4315402/">三体</a>
-        </div>
-        <div class="bangumi-meta">
-            <span class="bangumi-info-items" >
-                <span class="bangumi-info-item">
-                
-                <span class="bangumi-info-total">全15话</span><em
-                        class="bangumi-info-label-em">0</em>
-                </span>
-                
-                
-                <span class="bangumi-info-item bangumi-area">
-                    <span class="bangumi-info-label">国创</span> <em>中国大陆</em>
-                </span>
-                
-                <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>5.0 亿</em>
-                </span>
-                <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>706.0 万</em>
-                </span>
-                <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>222.9 万</em>
-                </span>
-                <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>173.3 万</em>
-                </span>
-                <span class="bangumi-info-item bangumi-info-item-score">
-                    <span class="bangumi-info-label">评分</span> <em>8.2</em>
-                </span>
-            </span>
-        </div>
-        <div class="bangumi-comments" ><p>简介：【第5集起大会员专享】
-无数细线横亘在星空之中，如同一把巨大的刷子。三体星舰队将于400年后抵达。遥远蝴蝶扇动着翅膀，也改变了罗辑的命运，轰然打开的门后是世界中心——面壁计划开启。同时，智子所创建的破...</p> </div>
-    </div>
-</div>
-
-        
-        <div class="bangumi-item">
-    <div class="bangumi-picture"><img src="https://cdn.jsdelivr.net/npm/hexo-bilibili-bangumi@1.2.0/lib/img/loading.gif"  data-src="https://i0.hdslb.com/bfs/bangumi/image/6e5c5848ff8943fd6366e943a4f75b98598c50c6.png" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
-    </div>
-    <div class="bangumi-info">
-        <div class="bangumi-title">
-            <a target="_blank" href="https://www.bilibili.com/bangumi/media/md28412536/">伍六七之暗影宿命</a>
-        </div>
-        <div class="bangumi-meta">
-            <span class="bangumi-info-items" >
-                <span class="bangumi-info-item">
-                
-                <span class="bangumi-info-total">全10话</span><em
-                        class="bangumi-info-label-em">0</em>
-                </span>
-                
-                
-                <span class="bangumi-info-item bangumi-area">
-                    <span class="bangumi-info-label">国创</span> <em>中国大陆</em>
-                </span>
-                
-                <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>3.6 亿</em>
-                </span>
-                <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>1244.9 万</em>
-                </span>
-                <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>372.0 万</em>
-                </span>
-                <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>100.2 万</em>
-                </span>
-                <span class="bangumi-info-item bangumi-info-item-score">
-                    <span class="bangumi-info-label">评分</span> <em>9.2</em>
-                </span>
-            </span>
-        </div>
-        <div class="bangumi-comments" ><p>简介：随着伍六七回到玄武国寻找他的身世，亦引起了七大暗影刺客的追捕。然而每一位暗影刺客都带着不同的目的和不同的过去，青凤的阴谋也在此浮出了水面。而此时等待着小鸡岛上的人民，又将是另一个危机，伍六七将如何面对...</p> </div>
-    </div>
-</div>
-
-        
-        <div class="bangumi-item">
-    <div class="bangumi-picture"><img src="https://cdn.jsdelivr.net/npm/hexo-bilibili-bangumi@1.2.0/lib/img/loading.gif"  data-src="https://i0.hdslb.com/bfs/bangumi/image/38e2a273f528fd01c34f1fc4df0f69c64487efad.png" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
+    <div class="bangumi-picture"><img src="https://i0.hdslb.com/bfs/bangumi/image/38e2a273f528fd01c34f1fc4df0f69c64487efad.png"  data-src="https://i0.hdslb.com/bfs/bangumi/image/38e2a273f528fd01c34f1fc4df0f69c64487efad.png" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
     </div>
     <div class="bangumi-info">
         <div class="bangumi-title">
@@ -1188,10 +1325,10 @@
                     <span class="bangumi-info-label">总播放</span> <em>8.5 亿</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>457.6 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>458.6 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>141.7 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>142.4 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
                     <span class="bangumi-info-label">弹幕总数</span> <em>3.1 亿</em>
@@ -1207,7 +1344,92 @@
 
         
         <div class="bangumi-item">
-    <div class="bangumi-picture"><img src="https://cdn.jsdelivr.net/npm/hexo-bilibili-bangumi@1.2.0/lib/img/loading.gif"  data-src="https://i0.hdslb.com/bfs/bangumi/image/e9ad30dd6f8fa74df16c62de048e35dd5d7ffda1.png" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
+    <div class="bangumi-picture"><img src="https://i0.hdslb.com/bfs/bangumi/image/9870f898b8a39bbb8048f34317f8d78a02cc1770.png"  data-src="https://i0.hdslb.com/bfs/bangumi/image/9870f898b8a39bbb8048f34317f8d78a02cc1770.png" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
+    </div>
+    <div class="bangumi-info">
+        <div class="bangumi-title">
+            <a target="_blank" href="https://www.bilibili.com/bangumi/media/md4315402/">三体</a>
+        </div>
+        <div class="bangumi-meta">
+            <span class="bangumi-info-items" >
+                <span class="bangumi-info-item">
+                
+                <span class="bangumi-info-total">全15话</span><em
+                        class="bangumi-info-label-em">0</em>
+                </span>
+                
+                
+                <span class="bangumi-info-item bangumi-area">
+                    <span class="bangumi-info-label">国创</span> <em>中国大陆</em>
+                </span>
+                
+                <span class="bangumi-info-item bangumi-play">
+                    <span class="bangumi-info-label">总播放</span> <em>5.2 亿</em>
+                </span>
+                <span class="bangumi-info-item bangumi-follow">
+                    <span class="bangumi-info-label">追番人数</span> <em>705.1 万</em>
+                </span>
+                <span class="bangumi-info-item bangumi-coin">
+                    <span class="bangumi-info-label">硬币数</span> <em>224.6 万</em>
+                </span>
+                <span class="bangumi-info-item bangumi-danmaku">
+                    <span class="bangumi-info-label">弹幕总数</span> <em>176.7 万</em>
+                </span>
+                <span class="bangumi-info-item bangumi-info-item-score">
+                    <span class="bangumi-info-label">评分</span> <em>8.2</em>
+                </span>
+            </span>
+        </div>
+        <div class="bangumi-comments" ><p>简介：【第5集起大会员专享】
+无数细线横亘在星空之中，如同一把巨大的刷子。三体星舰队将于400年后抵达。遥远蝴蝶扇动着翅膀，也改变了罗辑的命运，轰然打开的门后是世界中心——面壁计划开启。同时，智子所创建的破...</p> </div>
+    </div>
+</div>
+
+        
+        <div class="bangumi-item">
+    <div class="bangumi-picture"><img src="https://i0.hdslb.com/bfs/bangumi/image/6e5c5848ff8943fd6366e943a4f75b98598c50c6.png"  data-src="https://i0.hdslb.com/bfs/bangumi/image/6e5c5848ff8943fd6366e943a4f75b98598c50c6.png" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
+    </div>
+    <div class="bangumi-info">
+        <div class="bangumi-title">
+            <a target="_blank" href="https://www.bilibili.com/bangumi/media/md28412536/">伍六七之暗影宿命</a>
+        </div>
+        <div class="bangumi-meta">
+            <span class="bangumi-info-items" >
+                <span class="bangumi-info-item">
+                
+                <span class="bangumi-info-total">全10话</span><em
+                        class="bangumi-info-label-em">0</em>
+                </span>
+                
+                
+                <span class="bangumi-info-item bangumi-area">
+                    <span class="bangumi-info-label">国创</span> <em>中国大陆</em>
+                </span>
+                
+                <span class="bangumi-info-item bangumi-play">
+                    <span class="bangumi-info-label">总播放</span> <em>4.0 亿</em>
+                </span>
+                <span class="bangumi-info-item bangumi-follow">
+                    <span class="bangumi-info-label">追番人数</span> <em>1247.1 万</em>
+                </span>
+                <span class="bangumi-info-item bangumi-coin">
+                    <span class="bangumi-info-label">硬币数</span> <em>382.5 万</em>
+                </span>
+                <span class="bangumi-info-item bangumi-danmaku">
+                    <span class="bangumi-info-label">弹幕总数</span> <em>102.8 万</em>
+                </span>
+                <span class="bangumi-info-item bangumi-info-item-score">
+                    <span class="bangumi-info-label">评分</span> <em>9.2</em>
+                </span>
+            </span>
+        </div>
+        <div class="bangumi-comments" ><p>简介：随着伍六七回到玄武国寻找他的身世，亦引起了七大暗影刺客的追捕。然而每一位暗影刺客都带着不同的目的和不同的过去，青凤的阴谋也在此浮出了水面。而此时等待着小鸡岛上的人民，又将是另一个危机，伍六七将如何面对...</p> </div>
+    </div>
+</div>
+
+        
+        <div class="bangumi-item">
+    <div class="bangumi-picture"><img src="https://i0.hdslb.com/bfs/bangumi/image/e9ad30dd6f8fa74df16c62de048e35dd5d7ffda1.png"  data-src="https://i0.hdslb.com/bfs/bangumi/image/e9ad30dd6f8fa74df16c62de048e35dd5d7ffda1.png" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
     </div>
     <div class="bangumi-info">
         <div class="bangumi-title">
@@ -1227,16 +1449,16 @@
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>2.4 亿</em>
+                    <span class="bangumi-info-label">总播放</span> <em>2.5 亿</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>552.9 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>555.0 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>274.9 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>275.8 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>68.0 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>68.3 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.9</em>
@@ -1249,7 +1471,7 @@
 
         
         <div class="bangumi-item">
-    <div class="bangumi-picture"><img src="https://cdn.jsdelivr.net/npm/hexo-bilibili-bangumi@1.2.0/lib/img/loading.gif"  data-src="https://i0.hdslb.com/bfs/bangumi/image/f51209a66f693cd4964cf91a50d11924172e6121.png" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
+    <div class="bangumi-picture"><img src="https://i0.hdslb.com/bfs/bangumi/image/f51209a66f693cd4964cf91a50d11924172e6121.png"  data-src="https://i0.hdslb.com/bfs/bangumi/image/f51209a66f693cd4964cf91a50d11924172e6121.png" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
     </div>
     <div class="bangumi-info">
         <div class="bangumi-title">
@@ -1269,16 +1491,16 @@
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>396.7 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>402.3 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>10.2 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>10.3 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
                     <span class="bangumi-info-label">硬币数</span> <em>3.2 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>4.3 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>4.4 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>-</em>
@@ -1291,7 +1513,7 @@
 
         
         <div class="bangumi-item">
-    <div class="bangumi-picture"><img src="https://cdn.jsdelivr.net/npm/hexo-bilibili-bangumi@1.2.0/lib/img/loading.gif"  data-src="https://i0.hdslb.com/bfs/bangumi/image/00843865ea13702eccc4efd64c313fd4c8029c6b.jpg" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
+    <div class="bangumi-picture"><img src="https://i0.hdslb.com/bfs/bangumi/image/00843865ea13702eccc4efd64c313fd4c8029c6b.jpg"  data-src="https://i0.hdslb.com/bfs/bangumi/image/00843865ea13702eccc4efd64c313fd4c8029c6b.jpg" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
     </div>
     <div class="bangumi-info">
         <div class="bangumi-title">
@@ -1311,16 +1533,16 @@
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>4.5 亿</em>
+                    <span class="bangumi-info-label">总播放</span> <em>4.6 亿</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>1027.6 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>1028.4 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>401.9 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>402.3 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>184.6 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>184.7 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.8</em>
@@ -1333,7 +1555,7 @@
 
         
         <div class="bangumi-item">
-    <div class="bangumi-picture"><img src="https://cdn.jsdelivr.net/npm/hexo-bilibili-bangumi@1.2.0/lib/img/loading.gif"  data-src="https://i0.hdslb.com/bfs/bangumi/image/90b51647c381091984dc0664c05ed988c66eb13a.jpg" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
+    <div class="bangumi-picture"><img src="https://i0.hdslb.com/bfs/bangumi/image/90b51647c381091984dc0664c05ed988c66eb13a.jpg"  data-src="https://i0.hdslb.com/bfs/bangumi/image/90b51647c381091984dc0664c05ed988c66eb13a.jpg" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
     </div>
     <div class="bangumi-info">
         <div class="bangumi-title">
@@ -1353,16 +1575,16 @@
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>2.5 亿</em>
+                    <span class="bangumi-info-label">总播放</span> <em>2.6 亿</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>703.2 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>703.9 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>289.0 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>289.2 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>282.0 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>282.2 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.8</em>
@@ -1375,7 +1597,7 @@
 
         
         <div class="bangumi-item">
-    <div class="bangumi-picture"><img src="https://cdn.jsdelivr.net/npm/hexo-bilibili-bangumi@1.2.0/lib/img/loading.gif"  data-src="https://i0.hdslb.com/bfs/bangumi/image/b69e26d9e50514f3fa99eac9ab5aabf2a6e28c88.jpg" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
+    <div class="bangumi-picture"><img src="https://i0.hdslb.com/bfs/bangumi/image/b69e26d9e50514f3fa99eac9ab5aabf2a6e28c88.jpg"  data-src="https://i0.hdslb.com/bfs/bangumi/image/b69e26d9e50514f3fa99eac9ab5aabf2a6e28c88.jpg" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
     </div>
     <div class="bangumi-info">
         <div class="bangumi-title">
@@ -1398,13 +1620,13 @@
                     <span class="bangumi-info-label">总播放</span> <em>3.6 亿</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>604.6 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>605.2 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>201.4 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>201.7 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>231.6 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>231.7 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.8</em>
@@ -1417,7 +1639,7 @@
 
         
         <div class="bangumi-item">
-    <div class="bangumi-picture"><img src="https://cdn.jsdelivr.net/npm/hexo-bilibili-bangumi@1.2.0/lib/img/loading.gif"  data-src="https://i0.hdslb.com/bfs/bangumi/image/4fed6a1e2e9aae0f171c904c36c23384586e8d90.png" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
+    <div class="bangumi-picture"><img src="https://i0.hdslb.com/bfs/bangumi/image/4fed6a1e2e9aae0f171c904c36c23384586e8d90.png"  data-src="https://i0.hdslb.com/bfs/bangumi/image/4fed6a1e2e9aae0f171c904c36c23384586e8d90.png" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
     </div>
     <div class="bangumi-info">
         <div class="bangumi-title">
@@ -1437,16 +1659,16 @@
                 </span>
                 
                 <span class="bangumi-info-item bangumi-play">
-                    <span class="bangumi-info-label">总播放</span> <em>3537.2 万</em>
+                    <span class="bangumi-info-label">总播放</span> <em>3574.9 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>344.3 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>346.7 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>34.1 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>34.5 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>76.4 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>76.6 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>9.6</em>
@@ -1459,7 +1681,7 @@
 
         
         <div class="bangumi-item">
-    <div class="bangumi-picture"><img src="https://cdn.jsdelivr.net/npm/hexo-bilibili-bangumi@1.2.0/lib/img/loading.gif"  data-src="https://i0.hdslb.com/bfs/bangumi/image/8d1be9e8c77696f34886b8f471d935f504a014d3.jpg" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
+    <div class="bangumi-picture"><img src="https://i0.hdslb.com/bfs/bangumi/image/8d1be9e8c77696f34886b8f471d935f504a014d3.jpg"  data-src="https://i0.hdslb.com/bfs/bangumi/image/8d1be9e8c77696f34886b8f471d935f504a014d3.jpg" referrerPolicy="no-referrer" width="110" style="width:110px;margin:20px auto;" />
     </div>
     <div class="bangumi-info">
         <div class="bangumi-title">
@@ -1482,13 +1704,13 @@
                     <span class="bangumi-info-label">总播放</span> <em>5.1 亿</em>
                 </span>
                 <span class="bangumi-info-item bangumi-follow">
-                    <span class="bangumi-info-label">追番人数</span> <em>812.5 万</em>
+                    <span class="bangumi-info-label">追番人数</span> <em>813.1 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-coin">
-                    <span class="bangumi-info-label">硬币数</span> <em>413.1 万</em>
+                    <span class="bangumi-info-label">硬币数</span> <em>413.3 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-danmaku">
-                    <span class="bangumi-info-label">弹幕总数</span> <em>526.1 万</em>
+                    <span class="bangumi-info-label">弹幕总数</span> <em>526.3 万</em>
                 </span>
                 <span class="bangumi-info-item bangumi-info-item-score">
                     <span class="bangumi-info-label">评分</span> <em>8.9</em>
@@ -1518,9 +1740,9 @@
     const type = 'bangumi';
     const color = '';
     const showMyComment = false;
-    const pagenumsPre = [70,4,14];
+    const pagenumsPre = [72,7,19];
     
-    const bangumiLazyload = true;
+    const bangumiLazyload = false;
     "use strict";/* eslint-disable no-plusplus */(function(){// eslint-disable-next-line func-style
 function a(){this.classList.add("bangumi-active");for(var a=this.siblings(),b=0;b<a.length;b++)a[b].classList.remove("bangumi-active");// 显示对应板块
 var c=this.id.replace("tab","item"),d=document.getElementById(c);d.classList.remove("bangumi-hide"),d.classList.add("bangumi-show"),a=document.getElementById(c).siblings();for(var e=0;e<a.length;e++)a[e].classList.remove("bangumi-show"),a[e].classList.add("bangumi-hide")}Element.prototype.siblings=function(){for(var a=[],b=this.parentNode.children,c=0;c<b.length;c++)b[c]!==this&&a.push(b[c]);return a};for(var b=document.getElementsByClassName("bangumi-tab"),c=0;c<b.length;c++)b[c].onclick=a,b[c].onclick.apply(b[c]);"undefined"!=typeof pagenumsPre&&axios.get(new URL("../bangumis.json",window.location.href)).then(function(a){if(a.data){var b={wantWatch:a.data.wantWatch.slice(10).map(function(a){return ejs.render(ejsTemplate,{item:a,loading:loading,metaColor:metaColor,type:type})}).join("\n"),watching:a.data.watching.slice(10).map(function(a){return ejs.render(ejsTemplate,{item:a,loading:loading,metaColor:metaColor,type:type})}).join("\n"),watched:a.data.watched.slice(10).map(function(a){return ejs.render(ejsTemplate,{item:a,loading:loading,metaColor:metaColor,type:type})}).join("\n")};document.querySelectorAll("#bangumi-item1>.bangumi-pagination")[0].insertAdjacentHTML("beforeBegin",b.wantWatch),document.querySelectorAll("#bangumi-item2>.bangumi-pagination")[0].insertAdjacentHTML("beforeBegin",b.watching),document.querySelectorAll("#bangumi-item3>.bangumi-pagination")[0].insertAdjacentHTML("beforeBegin",b.watched)}})})();
@@ -1533,7 +1755,7 @@ const g="undefined"==typeof pagenumsPre?m[b].parentNode.siblings().length:pagenu
 
 </div>
              
-                
+            
     </div>
        
 </main>     
@@ -1581,13 +1803,14 @@ const g="undefined"==typeof pagenumsPre?m[b].parentNode.siblings().length:pagenu
             <div id="footer-banner-tips">
                 <div class="copyright">©2022 - 2023 By 
                     <a class="footer-banner-link" href="/" rel="external nofollow">天子笑</a>
+                    <a class="footer-banner-link" href="https://github.com/hexo-theme-Acrylic/Hexo-Theme-Acrylic-Next" rel="external nofollow" target="_blank"> Theme By Acrylic-Next</a>
                 </div>
             </div>
         </div>
         <div class="footer-banner-right">
             <a class="footer-banner-link" href="/rss/">订阅</a>
             
-                <a class="footer-banner-link" target="_blank" href="https://beian.miit.gov.cn/#/Integrated/index" rel="noopener external nofollow noreferrer noopener">
+                <a class="footer-banner-link" target="_blank" href="https://icp.gov.moe/?keyword=20224131" rel="noopener external nofollow noreferrer noopener">
                     萌ICP备20224131号
                 </a>
             
@@ -1599,7 +1822,7 @@ const g="undefined"==typeof pagenumsPre?m[b].parentNode.siblings().length:pagenu
 </div>
                 </footer>
             </div>
-           
+         
         <div>
     <script type="text/javascript" src="/js/utils.js"></script>
     <script type="text/javascript" src="/js/main.js"></script>
@@ -1629,6 +1852,9 @@ const g="undefined"==typeof pagenumsPre?m[b].parentNode.siblings().length:pagenu
      
 </div>
 
+<script src="/js/extend/covercolor.js"></script>
+
+
     <script>
   let pjaxSelectors = [
     'title',
@@ -1654,6 +1880,8 @@ const g="undefined"==typeof pagenumsPre?m[b].parentNode.siblings().length:pagenu
 </script>
     
 </div>
+        
+       
     
       <div id="sakana" style="position:fixed;right:0;bottom:0px;"></div>
       <script async onload='initSakanaWidget({"character":"takina","enable":true,"enable_mobile":200,"size":100,"autoFit":false,"bottom":"0px","controls":false,"stroke":{"color":"#b4b4b4","width":10},"threshold":0.1,"rotate":0,"customCharacters":[]})' src="https://cdn.jsdelivr.net/npm/sakana-widget@2.3.0/lib/sakana.min.js"></script>
