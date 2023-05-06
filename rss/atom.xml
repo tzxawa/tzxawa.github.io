@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>天子笑</title>
+  <icon>http://example.com/img/avatar.webp</icon>
+  <subtitle>忘羡一曲远 曲终人不散</subtitle>
+  <link href="http://example.com/rss/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2023-05-06T12:22:58.853Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>天子笑</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>博客使用手册</title>
+    <link href="http://example.com/posts/9b40.html"/>
+    <id>http://example.com/posts/9b40.html</id>
+    <published>2023-04-09T00:38:48.000Z</published>
+    <updated>2023-05-06T12:22:58.853Z</updated>
+    
+    
+    <summary type="html">100</summary>
+    
+    
+    
+    <category term="Blog" scheme="http://example.com/categories/Blog/"/>
+    
+    
+    <category term="Hexo" scheme="http://example.com/tags/Hexo/"/>
+    
+    <category term="Acrylic" scheme="http://example.com/tags/Acrylic/"/>
+    
+  </entry>
+  
+</feed>

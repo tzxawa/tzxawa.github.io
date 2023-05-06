@@ -1,0 +1,94 @@
+/*加载动画*/
+.loading-bg {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: var(--heo-card-bg);
+  z-index: 1001;
+  opacity: 1;
+  transition: 0.3s;
+}
+#loading-box .loading-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: auto;
+  border: 4px solid #f0f0f2;
+  animation-duration: 0.3s;
+  animation-name: loadingAction;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+#loading-box .loading-image-dot {
+  width: 30px;
+  height: 30px;
+  background: #6bdf8f;
+  position: absolute;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(18px, 24px);
+}
+#loading-box.loaded .loading-bg {
+  opacity: 0;
+  z-index: -1000;
+}
+@-moz-keyframes loadingAction {
+  0% {
+    opacity: 1;
+ }
+  100% {
+    opacity: 0.4;
+ }
+}
+@-webkit-keyframes loadingAction {
+  0% {
+    opacity: 1;
+ }
+  100% {
+    opacity: 0.4;
+ }
+}
+@-o-keyframes loadingAction {
+  0% {
+    opacity: 1;
+ }
+  100% {
+    opacity: 0.4;
+ }
+}
+@keyframes loadingAction {
+  0% {
+    opacity: 1;
+ }
+  100% {
+    opacity: 0.4;
+ }
+}
+
+/*页脚*/
+
+
+/*关于页面*/
+.author-content-item.careers img {
+  left: 450px;
+  width: 25%;
+}
+.author-content-item.careers .careers-group {
+  font-size: 25px;
+}
+
+.author-content-item.hobbies-left-side {
+  color: var(--heo-white);
+  width: 49%;
+  min-height: 300px;
+  background-color: var(--heo-shadow-red);
+}
+.author-content-item.hobbies-right-side {
+  color: var(--heo-white);
+  width: 49%;
+  min-height: 300px;
+  background-color: var(--heo-shadow-red);
+}

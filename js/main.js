@@ -1,5 +1,5 @@
 function setFixed(el) {
-    if(!el)return
+    if (!el) return
     const currentTop = window.scrollY || document.documentElement.scrollTop
     if (currentTop > 0) {
         el.classList.add('nav-fixed')
@@ -48,7 +48,7 @@ const sidebarFn = () => {
     const $menuMask = document.getElementById('menu-mask')
     const $body = document.body
 
-    if(!$toggleMenu)return
+    if (!$toggleMenu) return
 
     function openMobileSidebar() {
         utils.sidebarPaddingR()
@@ -143,22 +143,32 @@ const percent = () => {
     if ((centerY < visibleBottom) || (result > 90)) {
         document.querySelector("#nav-totop").classList.add("long");
         btn.innerHTML = GLOBALCONFIG.lang.backtop;
+        document.querySelectorAll(".needEndHide").forEach(item => {
+            item.classList.add("hide")
+        })
     } else {
         document.querySelector("#nav-totop").classList.remove("long");
         if (result >= 0) {
             btn.innerHTML = result;
+            document.querySelectorAll(".needEndHide").forEach(item => {
+                item.classList.remove("hide")
+            })
         }
     }
 }
 
 class toc {
     static init() {
+        const tocContainer = document.getElementById('card-toc')
+        if (!tocContainer || !tocContainer.querySelector('.toc a')) {
+            tocContainer.style.display = 'none'
+            return
+        }
         const el = document.querySelectorAll('.toc a')
-        if (!el)return
         el.forEach((e) => {
             e.addEventListener('click', (event) => {
                 event.preventDefault()
-                utils.scrollToDest(utils.getEleTop(document.getElementById(decodeURI((event.target.className === 'toc-text' ? event.target.parentNode.hash: event.target.hash).replace('#', '')))), 300)
+                utils.scrollToDest(utils.getEleTop(document.getElementById(decodeURI((event.target.className === 'toc-text' ? event.target.parentNode.hash : event.target.hash).replace('#', '')))), 300)
             })
         })
         this.active(el)
@@ -169,14 +179,14 @@ class toc {
         const $tocContent = document.getElementById('toc-content')
         const list = $article.querySelectorAll('h1,h2,h3,h4,h5,h6')
         let detectItem = ''
-        function autoScroll(el){
+        function autoScroll(el) {
             const activePosition = el.getBoundingClientRect().top
             const sidebarScrollTop = $tocContent.scrollTop
             if (activePosition > (document.documentElement.clientHeight - 100)) {
-              $tocContent.scrollTop = sidebarScrollTop + 150
+                $tocContent.scrollTop = sidebarScrollTop + 150
             }
             if (activePosition < 100) {
-              $tocContent.scrollTop = sidebarScrollTop - 150
+                $tocContent.scrollTop = sidebarScrollTop - 150
             }
         }
         function findHeadPosition(top) {
@@ -194,7 +204,7 @@ class toc {
 
             if (detectItem === currentIndex) return
             detectItem = currentIndex
-            document.querySelectorAll('.active').forEach((i) => {
+            document.querySelectorAll('.toc .active').forEach((i) => {
                 i.classList.remove('active')
             })
             const activeitem = toc[detectItem]
@@ -215,7 +225,6 @@ class toc {
         window.addEventListener('scroll', tocScrollFn)
     }
 }
-
 class acrylic {
     static switchDarkMode() {
         const nowMode = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' :
@@ -248,23 +257,28 @@ class acrylic {
             el.classList.remove('show')
         }
     }
-    static async copyPageUrl() {
-        try {
-            await navigator.clipboard.writeText(window.location.href)
-            utils.snackbarShow(GLOBALCONFIG.lang.copy.success, false, 2000)
-        } catch (err) {
-            utils.snackbarShow(GLOBALCONFIG.lang.copy.error, false, 2000)
-        }
+    static copyPageUrl() {
+        utils.copy(window.location.href)
     }
     static lightbox(el) {
         window.ViewImage && ViewImage.init(el);
     }
     static initTheme() {
-        const nowMode = localStorage.getItem('theme')
-        if(nowMode){
-            document.documentElement.setAttribute('data-theme', nowMode)
-        }
-    }
+        const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const cachedMode = localStorage.getItem('theme');
+        const isLightMode = !isDarkMode;
+        
+        const nowMode =
+          cachedMode && (cachedMode === 'dark' || cachedMode === 'light')
+            ? cachedMode === 'dark' && isLightMode ? 'light'
+            : cachedMode === 'light' && isDarkMode ? 'dark'
+            : cachedMode
+            : isDarkMode ? 'dark'
+            : 'light';
+        
+        document.documentElement.setAttribute('data-theme', nowMode);
+        localStorage.setItem('theme', nowMode);
+      }                  
     static reflashEssayWaterFall() {
         if (document.getElementById('waterfall')) {
             setTimeout(function () {
@@ -279,17 +293,17 @@ class acrylic {
             el.innerText = utils.timeDiff(new Date(GLOBALCONFIG.runtime), new Date()) + GLOBALCONFIG.lang.time.runtime
         }
     }
-    static lazyloadImg(){
+    static lazyloadImg() {
         window.lazyLoadInstance = new LazyLoad({
-          elements_selector: 'img',
-          threshold: 0,
-          data_src: 'lazy-src',
-          callback_error: (img) => {
-            img.setAttribute("src", GLOBALCONFIG.lazyload.error);
-          }
+            elements_selector: 'img',
+            threshold: 0,
+            data_src: 'lazy-src',
+            callback_error: (img) => {
+                img.setAttribute("src", GLOBALCONFIG.lazyload.error);
+            }
         })
-      }
-    static initbbtalk(){
+    }
+    static initbbtalk() {
         if (document.querySelector('#bber-talk')) {
             var swiper = new Swiper('.swiper-container', {
                 direction: 'vertical',
@@ -301,7 +315,95 @@ class acrylic {
             });
         }
     }
+    static musicToggle(){
+        const $music = document.querySelector('#nav-music'),
+        $meting = document.querySelector('meting-js'),
+        $console = document.getElementById('consoleMusic')
+        if (acrylic_musicPlaying) {
+            $music.classList.remove("playing")
+            $console.classList.remove("on")
+            acrylic_musicPlaying = false;
+            $meting.aplayer.pause();
+        }else {
+            $music.classList.add("playing")
+            $console.classList.add("on")
+            acrylic_musicPlaying = true;
+            $meting.aplayer.play();
+        }
+    }
 }
+
+class hightlight {
+    static createEle(langEl, item) {
+        const fragment = document.createDocumentFragment()
+        const highlightCopyEle = '<i class="fas fa-paste copy-button"></i>'
+
+        const hlTools = document.createElement('div')
+        hlTools.className = `highlight-tools`
+        hlTools.innerHTML = langEl + highlightCopyEle
+        hlTools.children[1].addEventListener('click', (e) => {
+            utils.copy($table.querySelector('.code').innerText)
+        })
+        fragment.appendChild(hlTools)
+        const itemHeight = item.clientHeight, $table = item.querySelector('table')
+        if (GLOBALCONFIG.hightlight.limit && itemHeight > GLOBALCONFIG.hightlight.limit + 30) {
+            $table.setAttribute('style', `height: ${GLOBALCONFIG.hightlight.limit}px`)
+            const ele = document.createElement('div')
+            ele.className = 'code-expand-btn'
+            ele.innerHTML = '<i class="fas fa-angle-double-down"></i>'
+            ele.addEventListener('click', (e) => {
+                $table.setAttribute('style', `height: ${itemHeight}px`)
+                e.target.className !== 'code-expand-btn' ? e.target.parentNode.classList.add('expand-done') : e.target.classList.add('expand-done')
+            })
+            fragment.appendChild(ele)
+        }
+        item.insertBefore(fragment, item.firstChild)
+    }
+    static init() {
+        const $figureHighlight = document.querySelectorAll('figure.highlight'), that = this
+        $figureHighlight.forEach(function (item) {
+            let langName = item.getAttribute('class').split(' ')[1]
+            if (langName === 'plaintext' || langName === undefined) langName = 'Code'
+            const highlightLangEle = `<div class="code-lang">${langName.toUpperCase()}</div>`
+            that.createEle(highlightLangEle, item)
+        })
+    }
+}
+
+class tabs {
+    static init(){
+        this.clickFnOfTabs()
+        this.backToTop()
+    }
+    static clickFnOfTabs() {
+        document.querySelectorAll('#article-container .tab > button').forEach(function (item) {
+            item.addEventListener('click', function (e) {
+                const that = this
+                const $tabItem = that.parentNode
+                if (!$tabItem.classList.contains('active')) {
+                    const $tabContent = $tabItem.parentNode.nextElementSibling
+                    const $siblings = utils.siblings($tabItem, '.active')[0]
+                    $siblings && $siblings.classList.remove('active')
+                    $tabItem.classList.add('active')
+                    const tabId = that.getAttribute('data-href').replace('#', '')
+                    const childList = [...$tabContent.children]
+                    childList.forEach(item => {
+                        if (item.id === tabId) item.classList.add('active')
+                        else item.classList.remove('active')
+                    })
+                }
+            })
+        })
+    }
+    static backToTop() {
+        document.querySelectorAll('#article-container .tabs .tab-to-top').forEach(function (item) {
+            item.addEventListener('click', function () {
+                utils.scrollToDest(utils.getEleTop(item.parentElement.parentElement.parentNode), 300)
+            })
+        })
+    }
+}
+
 
 window.refreshFn = () => {
     scrollFn()
@@ -310,23 +412,31 @@ window.refreshFn = () => {
     chageTimeFormate()
     acrylic.addRuntime()
     GLOBALCONFIG.lazyload.enable && acrylic.lazyloadImg()
-    GLOBALCONFIG.lightbox && acrylic.lightbox('#article-container img, #bber .bber-content-img img')
+    GLOBALCONFIG.lightbox && acrylic.lightbox('#article-container img, #bber .bber-content-img img, #album_detail album-content-img img')
     GLOBALCONFIG.randomlinks && randomLinksList()
     PAGECONFIG.toc && toc.init()
+    if (PAGECONFIG.is_post || PAGECONFIG.is_page) {
+        GLOBALCONFIG.hightlight.enable && hightlight.init()
+        tabs.init()
+    }
     PAGECONFIG.comment && initComment()
-    if(PAGECONFIG.is_home){
+    if (PAGECONFIG.is_home) {
         showTodayCard()
         acrylic.initbbtalk()
     }
-    if(PAGECONFIG.is_page && PAGECONFIG.page === 'says')acrylic.reflashEssayWaterFall()
+    if (PAGECONFIG.is_page && PAGECONFIG.page === 'says') acrylic.reflashEssayWaterFall()
+    if (PAGECONFIG.is_page) {
+        if (document.getElementById('album_detail')) acrylic.reflashEssayWaterFall()
+    }
     GLOBALCONFIG.covercolor && coverColor()
 }
 
 acrylic.initTheme()
+let acrylic_musicPlaying = false
 document.addEventListener('DOMContentLoaded', function () {
     refreshFn()
 })
 
-document.addEventListener('pjax:complete', () => { 
+document.addEventListener('pjax:complete', () => {
     window.refreshFn()
 })

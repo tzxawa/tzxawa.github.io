@@ -33,8 +33,10 @@
 
 
 
-<script>var GLOBALCONFIG = {"root":"/","runtime":"2022-10-01 00:00:00","lazyload":{"enable":false,"error":"/img/acrylic.png"},"lightbox":true,"randomlinks":false,"lang":{"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"recent":"最近","yesterday":"昨天","berforeyesterday":"前天","daybefore":"天前","runtime":"天"},"sayhello":{"morning":"早上好","noon":"中午好","afternoon":"下午好","night":"晚上好","goodnight":"晚安","iam":"!  我是"},"search":{"empty":"搜索结果为空","hit":"已为您找到 ${query} 条结果","placeholder":"输入关键词快速查找"}},"covercolor":false};</script><script id="site-config">var PAGECONFIG = {"is_home":false,"is_post":false,"is_page":false,"page":false,"comment":false};</script>
-    <meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="天子笑" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/mycss.css" media="defer" onload="this.media='all'">
+
+<script>var GLOBALCONFIG = {"root":"/","runtime":"2022-10-01 00:00:00","lazyload":{"enable":false,"error":"/img/acrylic.png"},"hightlight":{"enable":true,"limit":200},"lightbox":true,"randomlinks":false,"lang":{"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"recent":"最近","yesterday":"昨天","berforeyesterday":"前天","daybefore":"天前","runtime":"天"},"sayhello":{"morning":"早上好","noon":"中午好","afternoon":"下午好","night":"晚上好","goodnight":"晚安","iam":"!  我是"},"search":{"empty":"搜索结果为空","hit":"已为您找到 ${query} 条结果","placeholder":"输入关键词快速查找"}},"covercolor":true};</script><script id="site-config">var PAGECONFIG = {"is_home":false,"is_post":false,"is_page":false,"page":false,"comment":false};</script>
+    <meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/rss/atom.xml" title="天子笑" type="application/atom+xml">
 </head>
     <body id="body">
         
@@ -42,6 +44,7 @@
     <div class="loading-bg">
         <img class="loading-img nolazyload" alt="loading image"
             src="/img/avatar.webp">
+        <div class="loading-image-dot"></div>
         </div>
 </div>
 <script>
@@ -132,9 +135,10 @@
         <div class="console-btn-item"> <a class="darkmode_switchbutton" onclick="acrylic.switchDarkMode()" title="显示模式切换"
                 href="javascript:void(0);" rel="external nofollow" data-pjax-state=""><i class="fas fa-moon"
                     style="font-size: 1rem;"></i></a></div>
-        <div class="console-btn-item" id="consoleMusic" onclick="heo.musicToggle()" title="音乐开关"><a class="music-switch"
-                data-pjax-state=""><i class="fas fa-music"></i></a></div>
-        <div class="console-btn-item" id="consoleFPS" onclick="heo.FPSToggle()" title="帧率显示开关"><a class="FPS-switch"
+                    
+            <div class="console-btn-item" id="consoleMusic" onclick="acrylic.musicToggle()" title="音乐开关"><a class="music-switch"><i class="fas fa-music"></i></a></div>
+        
+        <div class="console-btn-item" id="consoleFPS" onclick="acrylic.FPSToggle()" title="帧率显示开关"><a class="FPS-switch"
                 data-pjax-state=""><i class="fas fa-gauge"></i></a></div>
     </div>
     <div class="console-mask" onclick="acrylic.hideConsole()" href="javascript:void(0);" rel="external nofollow"></div>
@@ -153,49 +157,42 @@
         
             <div class="back-menu-list-groups">
     
-        
-            <div class="back-menu-list-group">
-                <div class="back-menu-list-title">
-                    我的
-                </div>
-            
-                
-                <div class="back-menu-list">
-                    <a class="back-menu-item" href="/home/" rel="external nofollow"
-                        title="主页">
-                        <img class="back-menu-item-icon" src="/img/avatar.webp" loading="lazy">
-                        <span class="back-menu-item-text">
-                            主页
-                        </span>
-                    </a>
-                </div>
-            
-                
-                <div class="back-menu-list">
-                    <a class="back-menu-item" href="/" rel="external nofollow"
-                        title="博客">
-                        <img class="back-menu-item-icon" src="/img/avatar.webp" loading="lazy">
-                        <span class="back-menu-item-text">
-                            博客
-                        </span>
-                    </a>
-                </div>
-            
-                
-                <div class="back-menu-list">
-                    <a class="back-menu-item" href="/plog/" rel="external nofollow"
-                        title="图片博客">
-                        <img class="back-menu-item-icon" src="/img/avatar.webp" loading="lazy">
-                        <span class="back-menu-item-text">
-                            图片博客
-                        </span>
-                    </a>
-                </div>
-            
+      
+      <div class="back-menu-list-group">
+        <div class="back-menu-list-title">
+          我的
         </div>
+        <div class="back-menu-list">
+          
+            
+            <a class="back-menu-item" href="/tzx-index/" rel="external nofollow" title="主页">
+              <img class="back-menu-item-icon" src="/img/avatar.webp" loading="lazy">
+              <span class="back-menu-item-text">
+                主页
+              </span>
+            </a>
+          
+            
+            <a class="back-menu-item" href="/" rel="external nofollow" title="博客">
+              <img class="back-menu-item-icon" src="/img/avatar.webp" loading="lazy">
+              <span class="back-menu-item-text">
+                博客
+              </span>
+            </a>
+          
+            
+            <a class="back-menu-item" href="/plog/" rel="external nofollow" title="图片博客">
+              <img class="back-menu-item-icon" src="/img/avatar.webp" loading="lazy">
+              <span class="back-menu-item-text">
+                图片博客
+              </span>
+            </a>
+          
+        </div>
+      </div>
     
-</div>
-
+  </div>
+  
         
         <div class="menus_items">
     
@@ -271,16 +268,16 @@
                 <ul class="menus_item_child">
                     
                         <li>
-                            <a class="site-page child" href="/bangumis/">
-                                <i class="fab fa-bilibili"></i>
-                                <span> 追番</span>
+                            <a class="site-page child" href="/music/">
+                                <i class="fas fa-music"></i>
+                                <span> 音乐</span>
                             </a>
                         </li>
                     
                         <li>
-                            <a class="site-page child" href="/music/">
-                                <i class="fas fa-music"></i>
-                                <span> 音乐</span>
+                            <a class="site-page child" href="/says/">
+                                <i class="fas fa-lightbulb"></i>
+                                <span> 说说</span>
                             </a>
                         </li>
                     
@@ -304,6 +301,14 @@
             </div>
             <div class="card-tag-cloud">
                 
+                    <a href="/tags/Hexo/" style="font-size: 1em; color: #d3d3d3">Hexo
+                        <sup>1</sup>
+                    </a>
+                
+                    <a href="/tags/Acrylic/" style="font-size: 1em; color: #d3d3d3">Acrylic
+                        <sup>1</sup>
+                    </a>
+                
             </div>
         </div>
     </div>
@@ -319,60 +324,53 @@
                     <i class="back-home-button-icon fas fa-grip-vertical"></i>
                     <div class="back-menu-list-groups">
     
-        
-            <div class="back-menu-list-group">
-                <div class="back-menu-list-title">
-                    我的
-                </div>
-            
-                
-                <div class="back-menu-list">
-                    <a class="back-menu-item" href="/home/" rel="external nofollow"
-                        title="主页">
-                        <img class="back-menu-item-icon" src="/img/avatar.webp" loading="lazy">
-                        <span class="back-menu-item-text">
-                            主页
-                        </span>
-                    </a>
-                </div>
-            
-                
-                <div class="back-menu-list">
-                    <a class="back-menu-item" href="/" rel="external nofollow"
-                        title="博客">
-                        <img class="back-menu-item-icon" src="/img/avatar.webp" loading="lazy">
-                        <span class="back-menu-item-text">
-                            博客
-                        </span>
-                    </a>
-                </div>
-            
-                
-                <div class="back-menu-list">
-                    <a class="back-menu-item" href="/plog/" rel="external nofollow"
-                        title="图片博客">
-                        <img class="back-menu-item-icon" src="/img/avatar.webp" loading="lazy">
-                        <span class="back-menu-item-text">
-                            图片博客
-                        </span>
-                    </a>
-                </div>
-            
+      
+      <div class="back-menu-list-group">
+        <div class="back-menu-list-title">
+          我的
         </div>
+        <div class="back-menu-list">
+          
+            
+            <a class="back-menu-item" href="/tzx-index/" rel="external nofollow" title="主页">
+              <img class="back-menu-item-icon" src="/img/avatar.webp" loading="lazy">
+              <span class="back-menu-item-text">
+                主页
+              </span>
+            </a>
+          
+            
+            <a class="back-menu-item" href="/" rel="external nofollow" title="博客">
+              <img class="back-menu-item-icon" src="/img/avatar.webp" loading="lazy">
+              <span class="back-menu-item-text">
+                博客
+              </span>
+            </a>
+          
+            
+            <a class="back-menu-item" href="/plog/" rel="external nofollow" title="图片博客">
+              <img class="back-menu-item-icon" src="/img/avatar.webp" loading="lazy">
+              <span class="back-menu-item-text">
+                图片博客
+              </span>
+            </a>
+          
+        </div>
+      </div>
     
-</div>
-
+  </div>
+  
                 </div>
             
             <a id="site-name" href="/" title="返回博客主页">
-                <span class="heoicon">
-                    天子笑
-                </span>
+                    
+                        <span class="heoicon">天子笑</span>
+                    
             </a>
         </div>
         <div id="page-name-mask">
             <div id="page-name">
-                <a id="page-name-text" onclick="acrylic.toTop()">标签</a>
+                <a id="page-name-text" onclick="acrylic.toTop()">tags</a>
             </div>
         </div>
         <div id="menus">
@@ -450,16 +448,16 @@
                 <ul class="menus_item_child">
                     
                         <li>
-                            <a class="site-page child" href="/bangumis/">
-                                <i class="fab fa-bilibili"></i>
-                                <span> 追番</span>
+                            <a class="site-page child" href="/music/">
+                                <i class="fas fa-music"></i>
+                                <span> 音乐</span>
                             </a>
                         </li>
                     
                         <li>
-                            <a class="site-page child" href="/music/">
-                                <i class="fas fa-music"></i>
-                                <span> 音乐</span>
+                            <a class="site-page child" href="/says/">
+                                <i class="fas fa-lightbulb"></i>
+                                <span> 说说</span>
                             </a>
                         </li>
                     
@@ -525,9 +523,21 @@
                 <main class="layout hide-aside" id="content-inner">
     <div id="page">
         
-            <h1 class="page-title" style="display: inline;">标签</h1>
+            <h1 class="page-title">标签</h1>
 <div class="category-lists">
     <div class="tag-cloud-list is-center">
+        
+            <a href="/tags/Hexo/">
+                <span class="tags-punctuation">#</span> 
+                Hexo
+                <span class="tagsPageCount">1</span>
+            </a>
+        
+            <a href="/tags/Acrylic/">
+                <span class="tags-punctuation">#</span> 
+                Acrylic
+                <span class="tagsPageCount">1</span>
+            </a>
         
     </div>
 </div>
@@ -540,8 +550,16 @@
                 <footer id="footer">
                     <div id="footer_deal">
     
+        <a class="deal_link" target="_blank" href="https://github.com/tzxawa/" rel="external nofollow noopener" title="Github">
+            <i class="fa-brands fa-github"></i>
+        </a>
+    
     <img class="footer_mini_logo" src="/img/avatar.webp"
         title="返回顶部" onclick="acrylic.toTop()">
+    
+        <a class="deal_link" href="mailto:tzxawa@qq.com" rel="external nofollow" title="Mail">
+            <i class="fa-solid fa-envelope"></i>
+        </a>
     
 </div>    
 <div id="heo-footer">
@@ -556,7 +574,7 @@
                 
                     <a class="footer-item" href="/tags/" title="文章标签" rel="noopener external nofollow noreferrer">文章标签</a>
                 
-                    <a class="footer-item" href="/link/" title="友链" rel="noopener external nofollow noreferrer">友链</a>
+                    <a class="footer-item" href="/link/" title="我的友链" rel="noopener external nofollow noreferrer">我的友链</a>
                     
             </div>
         </div>
@@ -565,9 +583,11 @@
             <h3 class="footer-title">Acrylic</h3>
             <div class="footer-links">
                 
-                    <a class="footer-item" target="_blank" href="https://acrylic.zhheo.com/" title="主题官网" rel="noopener external nofollow noreferrer noopener">主题官网</a>
+                    <a class="footer-item" target="_blank" href="https://next.acrylic.org.cn/" title="主题官网" rel="noopener external nofollow noreferrer noopener">主题官网</a>
                 
-                    <a class="footer-item" target="_blank" href="https://github.com/hexo-theme-Acrylic/Hexo-Theme-Acrylic" title="Github" rel="noopener external nofollow noreferrer noopener">Github</a>
+                    <a class="footer-item" target="_blank" href="https://next-docs.acrylic.org.cn/" title="主题文档" rel="noopener external nofollow noreferrer noopener">主题文档</a>
+                
+                    <a class="footer-item" target="_blank" href="https://github.com/hexo-theme-Acrylic/Hexo-Theme-Acrylic-Next" title="Github" rel="noopener external nofollow noreferrer noopener">Github</a>
                     
             </div>
         </div>
@@ -585,10 +605,13 @@
             </div>
         </div>
         <div class="footer-banner-right">
-            <a class="footer-banner-link" href="/rss/">订阅</a>
+            <a class="footer-banner-link" href="/atom.xml">订阅</a>
+            <a class="footer-banner-link" target="_blank" href="https://icp.gov.moe/?keyword=20224131" rel="noopener external nofollow noreferrer noopener">
+                萌ICP备20224131号
+            </a>
             
-                <a class="footer-banner-link" target="_blank" href="https://icp.gov.moe/?keyword=20224131" rel="noopener external nofollow noreferrer noopener">
-                    萌ICP备20224131号
+                <a class="footer-banner-link" target="_blank" href="https://beian.miit.gov.cn/#/Integrated/index" rel="noopener external nofollow noreferrer noopener">
+                    粤ICP备xxxxxx号
                 </a>
             
             <a class="footer-banner-link cc" target="_blank" href="https://creativecommons.org/licenses/by/4.0/" title="cc协议">
@@ -624,13 +647,26 @@
 <script src="/lib/swiper.min.js"></script>
 
 
-
 <div id="js-pjax">
+    
      
 </div>
 
-<script src="/js/extend/covercolor.js"></script>
+    
+<link rel="stylesheet" href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.css">
 
+    
+<script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js"></script>
+
+    
+<script src="https://cdn1.tianli0.top/npm/meting@2.0.1/dist/Meting.min.js"></script>
+
+
+
+    
+<script src="/js/extend/covercolor/local.js"></script>
+
+        
 
     <script>
   let pjaxSelectors = [
@@ -649,6 +685,14 @@
     scrollRestoration: false
   })
 
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+  })
+
   document.addEventListener('pjax:error', (e) => {
     if (e.request.status === 404) {
       pjax.loadUrl('/404.html')
@@ -658,7 +702,13 @@
     
 </div>
         
-       
+     
+        <div class="needEndHide" id="nav-music" onclick="acrylic.musicToggle()">
+    <div id="nav-music-hoverTips">音乐已暂停</div>
+    <meting-js id="8649484475" server="tencent" type="playlist" mutex="true"
+        preload="none" data-lrctype="0" order="random" theme="var(--heo-main)"></meting-js>
+</div>
+    
     
       <div id="sakana" style="position:fixed;right:0;bottom:0px;"></div>
       <script async onload='initSakanaWidget({"character":"takina","enable":true,"enable_mobile":200,"size":100,"autoFit":false,"bottom":"0px","controls":false,"stroke":{"color":"#b4b4b4","width":10},"threshold":0.1,"rotate":0,"customCharacters":[]})' src="https://cdn.jsdelivr.net/npm/sakana-widget@2.3.0/lib/sakana.min.js"></script>
@@ -710,4 +760,4 @@
   </script>
     </body>
 </html>
-<script>const posts=["6173e0a4dab8.html"];function toRandomPost(){ window.pjax ? pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]) : window.open('/'+posts[Math.floor(Math.random()*posts.length)], "_self"); };</script>
+<script>const posts=["posts/9b40.html"];function toRandomPost(){ window.pjax ? pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]) : window.open('/'+posts[Math.floor(Math.random()*posts.length)], "_self"); };</script>
