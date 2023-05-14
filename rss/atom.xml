@@ -6,7 +6,7 @@
   <link href="http://example.com/rss/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-05-14T03:33:39.398Z</updated>
+  <updated>2023-05-14T09:03:09.185Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>华为玩机指北</title>
+    <link href="http://example.com/posts/9c1a.html"/>
+    <id>http://example.com/posts/9c1a.html</id>
+    <published>2023-04-09T08:56:01.000Z</published>
+    <updated>2023-05-14T09:03:09.185Z</updated>
+    
+    
+    <summary type="html">100</summary>
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="玩机" scheme="http://example.com/tags/%E7%8E%A9%E6%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
     <title>博客使用手册</title>
     <link href="http://example.com/posts/9b40.html"/>
     <id>http://example.com/posts/9b40.html</id>
     <published>2023-04-09T08:38:48.000Z</published>
-    <updated>2023-05-14T03:33:39.398Z</updated>
+    <updated>2023-05-14T09:03:09.185Z</updated>
     
     
     <summary type="html">100</summary>
