@@ -622,7 +622,7 @@
             
                 <span class="post-meta-date" title="更新于">
                     <i class="post-meta-icon fa-solid fa-clock-rotate-left"></i>
-                    <time datetime="2023-05-21T08:55:29+00:00"></time>
+                    <time datetime="2023-05-21T09:09:11+00:00"></time>
                 </span>
             
             
@@ -635,7 +635,7 @@
                 
                     <span class="post-meta-wordcount">
                         <i class="fas fa-file-word fa-fw post-meta-icon" title="文章字数"></i>
-                        <span class="word-count">562</span>
+                        <span class="word-count">671</span>
                     </span>
                 
                 
@@ -676,12 +676,14 @@
 <p><a target="_blank" rel="noopener" href="https://developer.android.google.cn/studio/releases/platform-tools?hl=zh-cn">Android SDK</a></p>
 <h2 id="降级系统"><a href="#降级系统" class="headerlink" title="降级系统"></a>降级系统</h2><p>在开始刷机之前，需要系统版本在EMUI8&#x2F;9，且系统版本越接近出厂版本越好，目的是保证底包的稳定性。EMUI0及Harmony OS理论上可支持解BL锁及刷入AOSP和ROOT，但华为对此实行禁止，所以需要对系统进行降级操作。</p>
 <p>具体降级教程可以参考这篇文章：<a target="_blank" rel="noopener" href="https://tzxawa.github.io/posts/a6b9.html">如何给你的华为手机降级</a></p>
-<h2 id="解锁BL-Bootloader-锁"><a href="#解锁BL-Bootloader-锁" class="headerlink" title="解锁BL(Bootloader)锁"></a>解锁BL(Bootloader)锁</h2><p>Bootloader相当于Android的系统引导程序，BL被解锁前一般只处于只读状态。如果想要刷机，解锁BL是必要操作。由于华为于2018年关闭了获取BL解锁码的官方申请渠道，故要获取只能通过第三方渠道。BL解锁码在不更改的情况下都是固定的，这也就意味着你只需要解锁一次即可，不需要担心回锁。</p>
+<h2 id="解锁BL-Bootloader-锁"><a href="#解锁BL-Bootloader-锁" class="headerlink" title="解锁BL(Bootloader)锁"></a>解锁BL(Bootloader)锁</h2><p>Bootloader相当于Android的系统引导程序，BL被解锁前一般只处于只读状态。如果想要刷机，解锁BL是必要操作。由于华为于2018年关闭了获取BL解锁码的官方申请渠道，故要获取只能通过第三方渠道。</p>
+<p>BL解锁码在不更改的情况下都是固定的，这也就意味着你只需要解锁一次即可，不需要担心回锁。需要注意的是麒麟710和麒麟970没有BL解锁码，这也就意味着一但回锁就只能重新硬解，而无法通过解锁码二次解锁。</p>
 <h3 id="适用机型"><a href="#适用机型" class="headerlink" title="适用机型"></a>适用机型</h3><p>芯片为麒麟980及以下，且为非鸿蒙系统。</p>
-<h3 id="目前能获取到BL码的方法有以下几种："><a href="#目前能获取到BL码的方法有以下几种：" class="headerlink" title="目前能获取到BL码的方法有以下几种："></a>目前能获取到BL码的方法有以下几种：</h3><h4 id="他人代解"><a href="#他人代解" class="headerlink" title="他人代解"></a>他人代解</h4><p>在淘宝,拼多多都可以找到提供解BL锁服务的商家，具体价格取决于商家的良心程度，一般在10~25元不等。</p>
+<h3 id="获取BL解锁码"><a href="#获取BL解锁码" class="headerlink" title="获取BL解锁码"></a>获取BL解锁码</h3><h4 id="他人代解"><a href="#他人代解" class="headerlink" title="他人代解"></a>他人代解</h4><p>在淘宝,拼多多都可以找到提供解BL锁服务的商家，具体价格取决于商家的良心程度，一般在10~25元不等。另外一些商家还可以顺带帮你改BL解锁码，最好选择这种商家并将BL解锁码全部改成同一数字，方便好记。</p>
 <h4 id="自行解锁"><a href="#自行解锁" class="headerlink" title="自行解锁"></a>自行解锁</h4><p>如果你想自己动手，那么你可以在淘宝，拼多多租用HCU或NCK的加密狗，价格会比代解便宜些许。如果你有钞能力的话，你也可以直接买下永久的加密狗，商家一般都会教你如何使用。</p>
 <p><a target="_blank" rel="noopener" href="https://hcu-client.com/">HCU官网</a></p>
 <p>NCK官网</p>
+<p>另外还有一个开源免费的<a target="_blank" rel="noopener" href="https://github.com/mashed-potatoes/PotatoNV">Potato NV</a>，不过只支持特定芯片，具体以文档为准。</p>
 <h2 id="刷入AOSP"><a href="#刷入AOSP" class="headerlink" title="刷入AOSP"></a>刷入AOSP</h2><h2 id="刷入ROOT"><a href="#刷入ROOT" class="headerlink" title="刷入ROOT"></a>刷入ROOT</h2>
         </article>
         <div class="post-tools" id="post-tools">
@@ -843,7 +845,7 @@
         <span>文章目录</span>
     </div>
     <div class="toc-content" id="toc-content">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%B7%E6%9C%BA%E6%9C%89%E9%A3%8E%E9%99%A9%EF%BC%8C%E5%88%B7%E5%89%8D%E9%9C%80%E8%B0%A8%E6%85%8E%E3%80%82"><span class="toc-text">刷机有风险，刷前需谨慎。</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-text">准备工作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%B7%E6%9C%BA%E5%B7%A5%E5%85%B7%E7%AE%B1"><span class="toc-text">刷机工具箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ADB"><span class="toc-text">ADB</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%99%8D%E7%BA%A7%E7%B3%BB%E7%BB%9F"><span class="toc-text">降级系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E9%94%81BL-Bootloader-%E9%94%81"><span class="toc-text">解锁BL(Bootloader)锁</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%82%E7%94%A8%E6%9C%BA%E5%9E%8B"><span class="toc-text">适用机型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%AE%E5%89%8D%E8%83%BD%E8%8E%B7%E5%8F%96%E5%88%B0BL%E7%A0%81%E7%9A%84%E6%96%B9%E6%B3%95%E6%9C%89%E4%BB%A5%E4%B8%8B%E5%87%A0%E7%A7%8D%EF%BC%9A"><span class="toc-text">目前能获取到BL码的方法有以下几种：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%96%E4%BA%BA%E4%BB%A3%E8%A7%A3"><span class="toc-text">他人代解</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E8%A1%8C%E8%A7%A3%E9%94%81"><span class="toc-text">自行解锁</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%B7%E5%85%A5AOSP"><span class="toc-text">刷入AOSP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%B7%E5%85%A5ROOT"><span class="toc-text">刷入ROOT</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%B7%E6%9C%BA%E6%9C%89%E9%A3%8E%E9%99%A9%EF%BC%8C%E5%88%B7%E5%89%8D%E9%9C%80%E8%B0%A8%E6%85%8E%E3%80%82"><span class="toc-text">刷机有风险，刷前需谨慎。</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-text">准备工作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%B7%E6%9C%BA%E5%B7%A5%E5%85%B7%E7%AE%B1"><span class="toc-text">刷机工具箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ADB"><span class="toc-text">ADB</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%99%8D%E7%BA%A7%E7%B3%BB%E7%BB%9F"><span class="toc-text">降级系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E9%94%81BL-Bootloader-%E9%94%81"><span class="toc-text">解锁BL(Bootloader)锁</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%82%E7%94%A8%E6%9C%BA%E5%9E%8B"><span class="toc-text">适用机型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96BL%E8%A7%A3%E9%94%81%E7%A0%81"><span class="toc-text">获取BL解锁码</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%96%E4%BA%BA%E4%BB%A3%E8%A7%A3"><span class="toc-text">他人代解</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E8%A1%8C%E8%A7%A3%E9%94%81"><span class="toc-text">自行解锁</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%B7%E5%85%A5AOSP"><span class="toc-text">刷入AOSP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%B7%E5%85%A5ROOT"><span class="toc-text">刷入ROOT</span></a></li></ol>
     </div>
 </div>
             
