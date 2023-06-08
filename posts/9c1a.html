@@ -167,6 +167,13 @@
                     <ul class="card-archive-list">
     
      
+        <li class="card-archive-list-item"><a class="card-archive-list-link" onclick="pjax.loadUrl('/archives/2023-06/')" data-pjax-state=""><span
+            class="card-archive-list-date">2023-06</span>
+            <div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span
+                    class="card-archive-list-count-unit">篇</span></div>
+            </a>
+        </li>
+     
         <li class="card-archive-list-item"><a class="card-archive-list-link" onclick="pjax.loadUrl('/archives/2023-05/')" data-pjax-state=""><span
             class="card-archive-list-date">2023-05</span>
             <div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span
@@ -176,7 +183,7 @@
      
         <li class="card-archive-list-item"><a class="card-archive-list-link" onclick="pjax.loadUrl('/archives/2023-04/')" data-pjax-state=""><span
             class="card-archive-list-date">2023-04</span>
-            <div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span
+            <div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span
                     class="card-archive-list-count-unit">篇</span></div>
             </a>
         </li>
@@ -661,12 +668,12 @@
         <div class="meta-secondline">
             <span class="post-meta-date" title="发布于">
                 <i class="post-meta-icon fa-fw fas fa-calendar"></i>
-                <time datetime="2023-04-09T00:56:01+00:00"></time>
+                <time datetime="2023-06-09T16:00:00+00:00"></time>
             </span>
             
                 <span class="post-meta-date" title="更新于">
                     <i class="post-meta-icon fa-solid fa-clock-rotate-left"></i>
-                    <time datetime="2023-06-07T09:29:04+00:00"></time>
+                    <time datetime="2023-06-08T03:21:20+00:00"></time>
                 </span>
             
             
@@ -679,7 +686,7 @@
                 
                     <span class="post-meta-wordcount">
                         <i class="fas fa-file-word fa-fw post-meta-icon" title="文章字数"></i>
-                        <span class="word-count">781</span>
+                        <span class="word-count">1.4k</span>
                     </span>
                 
                 
@@ -708,36 +715,58 @@
                 <main class="layout" id="content-inner">
     <div id="post">
         <article class="post-content" id="article-container">
-            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="刷机有风险，刷前需谨慎。"><a href="#刷机有风险，刷前需谨慎。" class="headerlink" title="刷机有风险，刷前需谨慎。"></a>刷机有风险，刷前需谨慎。</h3><p>刷机时请遵守以下三条规则：</p>
-<p>1.不在无充分了解的情况下刷机</p>
-<p>2.不在无救砖包下刷机</p>
-<p>3.不在晚上刷机</p>
+            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><font size=5><strong>刷机有风险，刷前需谨慎。</strong></font></p>
+<p>刷机时请遵守以下三条规则：</p>
+<p>1.<strong>不在无充分了解的情况下刷机</strong></p>
+<p>2.<strong>不在无救砖包下刷机</strong></p>
+<p>3.<strong>不在晚上刷机</strong></p>
 <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h3 id="刷机工具箱"><a href="#刷机工具箱" class="headerlink" title="刷机工具箱"></a>刷机工具箱</h3><p>好用的刷机工具箱能为我们的刷机之路减少一些阻碍并带来便利，下面是一些工具箱推荐。</p>
 <p><a target="_blank" rel="noopener" href="https://atmb.top/">秋之盒</a>：简洁好用，UI好看</p>
 <p><a target="_blank" rel="noopener" href="https://lsdy.top/gjzs">搞机助手 </a>：功能丰富强大</p>
 <p><a target="_blank" rel="noopener" href="https://www.coolapk.com/feed/38489907?shareKey=ZDJhNDUyNjI1MTFhNjQ2MDljNmQ~">麒麟盘古工具箱</a>：华为专用，对特定机型更加方便</p>
 <h3 id="ADB"><a href="#ADB" class="headerlink" title="ADB"></a>ADB</h3><p>适合进阶，熟练使用ADB是机佬最重要的技能之一。</p>
 <p><a target="_blank" rel="noopener" href="https://developer.android.google.cn/studio/releases/platform-tools?hl=zh-cn">Android SDK</a></p>
+<p>另外还有一份ADB使用教程：<a target="_blank" rel="noopener" href="https://developer.android.google.cn/studio/command-line/adb?hl=zh-cn#devicestatus">ADB</a></p>
 <h2 id="降级系统"><a href="#降级系统" class="headerlink" title="降级系统"></a>降级系统</h2><p>在开始刷机之前，需要系统版本在EMUI8&#x2F;9，且系统版本越接近出厂版本越好，目的是保证底包的稳定性。EMUI0及Harmony OS理论上可支持解BL锁及刷入AOSP和ROOT，但华为对此实行禁止，所以需要对系统进行降级操作。</p>
 <p>具体降级教程可以参考这篇文章：<a target="_blank" rel="noopener" href="https://tzxawa.github.io/posts/a6b9.html">如何给你的华为手机降级</a></p>
 <h2 id="解锁BL-Bootloader-锁"><a href="#解锁BL-Bootloader-锁" class="headerlink" title="解锁BL(Bootloader)锁"></a>解锁BL(Bootloader)锁</h2><p>Bootloader相当于Android的系统引导程序，BL被解锁前一般只处于只读状态。如果想要刷机，解锁BL是必要操作。由于华为于2018年关闭了获取BL解锁码的官方申请渠道，故要获取只能通过第三方渠道。</p>
 <p>BL解锁码在不更改的情况下都是固定的，这也就意味着你只需要解锁一次即可，不需要担心回锁。需要注意的是麒麟710和麒麟970没有BL解锁码，这也就意味着一但回锁就只能重新硬解，而无法通过解锁码二次解锁。</p>
 <h3 id="适用机型"><a href="#适用机型" class="headerlink" title="适用机型"></a>适用机型</h3><p>芯片为麒麟980及以下，且为非鸿蒙系统。</p>
 <h3 id="获取BL解锁码"><a href="#获取BL解锁码" class="headerlink" title="获取BL解锁码"></a>获取BL解锁码</h3><h4 id="他人代解"><a href="#他人代解" class="headerlink" title="他人代解"></a>他人代解</h4><p>在淘宝,拼多多都可以找到提供解BL锁服务的商家，具体价格取决于商家的良心程度，一般在10~25元不等。另外一些商家还可以顺带帮你改BL解锁码，最好选择这种商家并将BL解锁码全部改成同一数字，方便好记。</p>
-<h4 id="自行解锁"><a href="#自行解锁" class="headerlink" title="自行解锁"></a>自行解锁</h4><p>如果你想靠自己解锁，向真正的机佬迈进，那么你需要自行使用第三方工具进行解锁。</p>
+<h4 id="自行解锁"><a href="#自行解锁" class="headerlink" title="自行解锁"></a>自行解锁</h4><p>如果你想靠自己解锁，向成为真正的机佬迈进，那么你需要自行使用第三方工具进行解锁。</p>
 <h5 id="付费使用"><a href="#付费使用" class="headerlink" title="付费使用"></a>付费使用</h5><p><a target="_blank" rel="noopener" href="https://hcu-client.com/">HCU Client</a></p>
-<img src="https://hcu-client.com/wp-content/uploads/2016/04/cropped-hcu-client-logo.png" alt="HCU Client" style="zoom: 150%;" />
+<img src="https://hcu-client.com/wp-content/uploads/2016/04/cropped-hcu-client-logo.png" alt="HCU CLIENT" style="zoom: 150%;" />
 
 <p><a target="_blank" rel="noopener" href="http://nckbox.com/">NCK Box</a></p>
-<p><img src="http://nckbox.com/wp-content/uploads/2019/12/Untitled-2.png" alt="NCK盒子"></p>
+<p><img src="http://nckbox.com/wp-content/uploads/2019/12/Untitled-2.png" alt="NCK BOX"></p>
 <p><a target="_blank" rel="noopener" href="https://www.evondt.com/index">EVONDT Tools</a></p>
 <img src="https://images.weserv.nl/?url=https://www.evondt.com/static/img/logo.e56aff0.png" alt="EVONDT" style="zoom:80%;" />
 
-<h5 id="开源免费"><a href="#开源免费" class="headerlink" title="开源免费"></a>开源免费</h5><p><a target="_blank" rel="noopener" href="https://github.com/mashed-potatoes/PotatoNV">Potato NV</a></p>
-<img src="https://images.weserv.nl/?url=https://raw.githubusercontent.com/mashed-potatoes/PotatoNV/master/assets/header.png"  />
+<h5 id="免费白嫖"><a href="#免费白嫖" class="headerlink" title="免费白嫖"></a>免费白嫖</h5><p><a target="_blank" rel="noopener" href="https://github.com/mashed-potatoes/PotatoNV">Potato NV</a></p>
+<img src="https://images.weserv.nl/?url=https://raw.githubusercontent.com/mashed-potatoes/PotatoNV/master/assets/header.png" alt="PotatoNV" />
 
 <h2 id="刷入AOSP"><a href="#刷入AOSP" class="headerlink" title="刷入AOSP"></a>刷入AOSP</h2><p>AOSP即Android Open Source Project，国内的安卓系统比如MIUI，Flyme等都是基于AOSP深度定制的。对比国内的臃肿的系统，AOSP简洁流畅的优点就体现出来了，实乃旧机养老的不二之选。理论上华为也能刷入国内的第三方系统，但是由于华为的垃圾开源和对系统的魔改，导致给华为编译第三方系统直接上升到地狱级难度，因此华为只能够刷入AOSP的GSI。</p>
 <p><a target="_blank" rel="noopener" href="https://developer.android.google.cn/topic/generic-system-image?hl=zh-cn">GSI</a>全称Generic System Image，是一种纯 Android 实现，采用未经修改的 Android 开源项目 (AOSP) 代码，可在各种 Android 设备上运行。</p>
+<h3 id="Treble-Check"><a href="#Treble-Check" class="headerlink" title="Treble Check"></a>Treble Check</h3><p>在开始刷入GSI之前，你需要通过<a target="_blank" rel="noopener" href="https://github.com/kevintresuelo/treble">Treble Check</a>来查看是否支持Project Treble，支持则说明你的手机可以刷入GSI，一般来说Android 8及以上都是支持的。</p>
+<p><img src="https://images.weserv.nl/?url=https://i0.hdslb.com/bfs/article/208f208ae0d2193e1757e251683a61518af51b88.jpg@942w_1958h_progressive.webp" alt="Treble Check"></p>
+<p><strong>Project Treble</strong>：必须支持Project Treble，否则无法刷入GSI</p>
+<p><strong>无缝系统更新</strong>：对刷入GSI无影响，感兴趣可以自行了解</p>
+<p><strong>CPU体系架构</strong>：需要注意自己的是64位还是32位</p>
+<p><strong>System-as-root</strong>：简称SAR，针对华为来说，如果支持System-as-root，那么你就需要选择AB分区的GSI</p>
+<h3 id="GSI选择"><a href="#GSI选择" class="headerlink" title="GSI选择"></a>GSI选择</h3><p>由于华为的特殊性，所以并不保证所有GSI都能在华为手机上跑起来，所以最好选择加入了<a target="_blank" rel="noopener" href="https://github.com/phhusson/treble_experimentations/">Phh补丁</a>或专门为华为手机优化过的GSI。</p>
+<p>推荐从以下渠道选择GSI：</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/">GitHub</a></p>
+<p><a target="_blank" rel="noopener" href="https://forum.xda-developers.com/">XDA论坛</a></p>
+<p>Phh项目的开发者也整理了一份添加了Phh补丁的GSI合集，这里面的GSI基本都是刷入就能开的：</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/phhusson/treble_experimentations/wiki/Generic-System-Image-(GSI)-list">Generic System Image List</a></p>
+<p>一份标准的GSI命名如下：</p>
+<p><strong>GSI包名</strong>-<strong>版本号</strong>-<strong>CPU架构</strong>(a64&#x2F;arm64)-<strong>ab分区</strong>(a：a-only&#x2F;b：ab)&#x2F;<strong>谷歌套件</strong>(g：有&#x2F;v：无)&#x2F;<strong>系统ROOT</strong>(N：无&#x2F;S：有&#x2F;Z：有)</p>
+<h3 id="正式刷入"><a href="#正式刷入" class="headerlink" title="正式刷入"></a>正式刷入</h3><p>刷入GSI有两种方式：线刷和卡刷，线刷需要使用adb刷入，而卡刷则需要用到TWRP。由于部分机型的twrp无法正常读取分区，并且线刷比卡刷更安全快捷，所以下面只介绍线刷刷入，对卡刷不再赘述。</p>
+<p>请确保你的GSI为.img格式，如果不是则说明你下的是压缩包，解压即可。</p>
+<p>打开adb命令行，输入如下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">adb devices <span class="comment">#查看连接设备，有序列号则连接成功</span></span><br><span class="line">adb reboot bootloader <span class="comment">#重启至fastboot</span></span><br><span class="line">adb flash system [拖入system.img] <span class="comment">#刷入系统镜像</span></span><br><span class="line">adb reboot <span class="comment">#退出fastboot并重启</span></span><br></pre></td></tr></table></figure>
+
+<p>在执行完最后一条命令后，按住上音量键，直到进入eRecovery模式，选择恢复系统出厂设置，接下来在恢复出厂设置后就会自动重启到Recovery模式，选择清除cache，清除完毕后重启手机等待进入系统。如果十分钟以内没有进系统，就说明这个GSI不兼容你的机型，换多几个重刷就好。</p>
 <h2 id="刷入ROOT"><a href="#刷入ROOT" class="headerlink" title="刷入ROOT"></a>刷入ROOT</h2>
         </article>
         <div class="post-tools" id="post-tools">
@@ -809,22 +838,17 @@
 </div>
         <nav class="pagination-post" id="pagination">
     
-        <div class="prev-post pull-left">
-            <a href="/posts/a6b9.html">
-                <div class="pagination-info">
-                    <div class="label">上一篇</div>
-                    <div class="prev_info">如何给你的华为手机降级</div>
-                </div>
-            </a>
-        </div>
-        <div class="next-post pull-right">
-            <a href="/posts/9b40.html">
-                <div class="pagination-info">
-                    <div class="label">下一篇</div>
-                    <div class="next_info">博客使用手册</div>
-                </div>
-            </a>
-        </div>
+        
+            <div class="next-post pull-full">
+                <a href="/posts/a6b9.html">
+                    <div class="pagination-info">
+                        <div class="label">下一篇</div>
+                        <div class="next_info">如何给你的华为手机降级</div>
+                    </div>
+                </a>
+            </div>
+                
+        
     
 </nav>
         
@@ -899,7 +923,7 @@
         <span>文章目录</span>
     </div>
     <div class="toc-content" id="toc-content">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%B7%E6%9C%BA%E6%9C%89%E9%A3%8E%E9%99%A9%EF%BC%8C%E5%88%B7%E5%89%8D%E9%9C%80%E8%B0%A8%E6%85%8E%E3%80%82"><span class="toc-text">刷机有风险，刷前需谨慎。</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-text">准备工作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%B7%E6%9C%BA%E5%B7%A5%E5%85%B7%E7%AE%B1"><span class="toc-text">刷机工具箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ADB"><span class="toc-text">ADB</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%99%8D%E7%BA%A7%E7%B3%BB%E7%BB%9F"><span class="toc-text">降级系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E9%94%81BL-Bootloader-%E9%94%81"><span class="toc-text">解锁BL(Bootloader)锁</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%82%E7%94%A8%E6%9C%BA%E5%9E%8B"><span class="toc-text">适用机型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96BL%E8%A7%A3%E9%94%81%E7%A0%81"><span class="toc-text">获取BL解锁码</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%96%E4%BA%BA%E4%BB%A3%E8%A7%A3"><span class="toc-text">他人代解</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E8%A1%8C%E8%A7%A3%E9%94%81"><span class="toc-text">自行解锁</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BB%98%E8%B4%B9%E4%BD%BF%E7%94%A8"><span class="toc-text">付费使用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%BC%80%E6%BA%90%E5%85%8D%E8%B4%B9"><span class="toc-text">开源免费</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%B7%E5%85%A5AOSP"><span class="toc-text">刷入AOSP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%B7%E5%85%A5ROOT"><span class="toc-text">刷入ROOT</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-text">准备工作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%B7%E6%9C%BA%E5%B7%A5%E5%85%B7%E7%AE%B1"><span class="toc-text">刷机工具箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ADB"><span class="toc-text">ADB</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%99%8D%E7%BA%A7%E7%B3%BB%E7%BB%9F"><span class="toc-text">降级系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E9%94%81BL-Bootloader-%E9%94%81"><span class="toc-text">解锁BL(Bootloader)锁</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%82%E7%94%A8%E6%9C%BA%E5%9E%8B"><span class="toc-text">适用机型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96BL%E8%A7%A3%E9%94%81%E7%A0%81"><span class="toc-text">获取BL解锁码</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%96%E4%BA%BA%E4%BB%A3%E8%A7%A3"><span class="toc-text">他人代解</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E8%A1%8C%E8%A7%A3%E9%94%81"><span class="toc-text">自行解锁</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BB%98%E8%B4%B9%E4%BD%BF%E7%94%A8"><span class="toc-text">付费使用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%85%8D%E8%B4%B9%E7%99%BD%E5%AB%96"><span class="toc-text">免费白嫖</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%B7%E5%85%A5AOSP"><span class="toc-text">刷入AOSP</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Treble-Check"><span class="toc-text">Treble Check</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GSI%E9%80%89%E6%8B%A9"><span class="toc-text">GSI选择</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E5%BC%8F%E5%88%B7%E5%85%A5"><span class="toc-text">正式刷入</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%B7%E5%85%A5ROOT"><span class="toc-text">刷入ROOT</span></a></li></ol>
     </div>
 </div>
             
@@ -912,25 +936,6 @@
     </div>
     <div class="aside-list">
         
-        
-            <div class="aside-list-item">
-                <a class="thumbnail" href="/posts/a6b9.html" title="如何给你的华为手机降级">
-                    <img
-                        alt="如何给你的华为手机降级"
-                        src="/img/hello.webp">
-                </a>
-                <div class="content">
-                    
-                        <a class="article-recent_post_categories" href="/posts/a6b9.html">
-                            技术
-                        </a>
-                    
-                    <a class="title" href="/posts/a6b9.html" title="如何给你的华为手机降级">
-                        如何给你的华为手机降级
-                    </a>
-                </div>
-            </div>
-                
         
             <div class="aside-list-item">
                 <a class="thumbnail" href="/posts/9c1a.html" title="华为玩机指北">
@@ -946,6 +951,25 @@
                     
                     <a class="title" href="/posts/9c1a.html" title="华为玩机指北">
                         华为玩机指北
+                    </a>
+                </div>
+            </div>
+                
+        
+            <div class="aside-list-item">
+                <a class="thumbnail" href="/posts/a6b9.html" title="如何给你的华为手机降级">
+                    <img
+                        alt="如何给你的华为手机降级"
+                        src="/img/hello.webp">
+                </a>
+                <div class="content">
+                    
+                        <a class="article-recent_post_categories" href="/posts/a6b9.html">
+                            技术
+                        </a>
+                    
+                    <a class="title" href="/posts/a6b9.html" title="如何给你的华为手机降级">
+                        如何给你的华为手机降级
                     </a>
                 </div>
             </div>
@@ -1204,4 +1228,4 @@
   </script>
     </body>
 </html>
-<script>const posts=["posts/a6b9.html","posts/9c1a.html","posts/9b40.html"];function toRandomPost(){ window.pjax ? pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]) : window.open('/'+posts[Math.floor(Math.random()*posts.length)], "_self"); };</script>
+<script>const posts=["posts/9c1a.html","posts/a6b9.html","posts/9b40.html"];function toRandomPost(){ window.pjax ? pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]) : window.open('/'+posts[Math.floor(Math.random()*posts.length)], "_self"); };</script>

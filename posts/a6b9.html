@@ -167,6 +167,13 @@
                     <ul class="card-archive-list">
     
      
+        <li class="card-archive-list-item"><a class="card-archive-list-link" onclick="pjax.loadUrl('/archives/2023-06/')" data-pjax-state=""><span
+            class="card-archive-list-date">2023-06</span>
+            <div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span
+                    class="card-archive-list-count-unit">篇</span></div>
+            </a>
+        </li>
+     
         <li class="card-archive-list-item"><a class="card-archive-list-link" onclick="pjax.loadUrl('/archives/2023-05/')" data-pjax-state=""><span
             class="card-archive-list-date">2023-05</span>
             <div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span
@@ -176,7 +183,7 @@
      
         <li class="card-archive-list-item"><a class="card-archive-list-link" onclick="pjax.loadUrl('/archives/2023-04/')" data-pjax-state=""><span
             class="card-archive-list-date">2023-04</span>
-            <div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span
+            <div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span
                     class="card-archive-list-count-unit">篇</span></div>
             </a>
         </li>
@@ -666,7 +673,7 @@
             
                 <span class="post-meta-date" title="更新于">
                     <i class="post-meta-icon fa-solid fa-clock-rotate-left"></i>
-                    <time datetime="2023-06-07T09:29:04+00:00"></time>
+                    <time datetime="2023-06-08T03:21:20+00:00"></time>
                 </span>
             
             
@@ -779,17 +786,22 @@
 </div>
         <nav class="pagination-post" id="pagination">
     
-        
-            <div class="next-post pull-full">
-                <a href="/posts/9c1a.html">
-                    <div class="pagination-info">
-                        <div class="label">下一篇</div>
-                        <div class="next_info">华为玩机指北</div>
-                    </div>
-                </a>
-            </div>
-                
-        
+        <div class="prev-post pull-left">
+            <a href="/posts/9c1a.html">
+                <div class="pagination-info">
+                    <div class="label">上一篇</div>
+                    <div class="prev_info">华为玩机指北</div>
+                </div>
+            </a>
+        </div>
+        <div class="next-post pull-right">
+            <a href="/posts/9b40.html">
+                <div class="pagination-info">
+                    <div class="label">下一篇</div>
+                    <div class="next_info">博客使用手册</div>
+                </div>
+            </a>
+        </div>
     
 </nav>
         
@@ -879,25 +891,6 @@
         
         
             <div class="aside-list-item">
-                <a class="thumbnail" href="/posts/a6b9.html" title="如何给你的华为手机降级">
-                    <img
-                        alt="如何给你的华为手机降级"
-                        src="/img/hello.webp">
-                </a>
-                <div class="content">
-                    
-                        <a class="article-recent_post_categories" href="/posts/a6b9.html">
-                            技术
-                        </a>
-                    
-                    <a class="title" href="/posts/a6b9.html" title="如何给你的华为手机降级">
-                        如何给你的华为手机降级
-                    </a>
-                </div>
-            </div>
-                
-        
-            <div class="aside-list-item">
                 <a class="thumbnail" href="/posts/9c1a.html" title="华为玩机指北">
                     <img
                         alt="华为玩机指北"
@@ -911,6 +904,25 @@
                     
                     <a class="title" href="/posts/9c1a.html" title="华为玩机指北">
                         华为玩机指北
+                    </a>
+                </div>
+            </div>
+                
+        
+            <div class="aside-list-item">
+                <a class="thumbnail" href="/posts/a6b9.html" title="如何给你的华为手机降级">
+                    <img
+                        alt="如何给你的华为手机降级"
+                        src="/img/hello.webp">
+                </a>
+                <div class="content">
+                    
+                        <a class="article-recent_post_categories" href="/posts/a6b9.html">
+                            技术
+                        </a>
+                    
+                    <a class="title" href="/posts/a6b9.html" title="如何给你的华为手机降级">
+                        如何给你的华为手机降级
                     </a>
                 </div>
             </div>
@@ -1169,4 +1181,4 @@
   </script>
     </body>
 </html>
-<script>const posts=["posts/a6b9.html","posts/9c1a.html","posts/9b40.html"];function toRandomPost(){ window.pjax ? pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]) : window.open('/'+posts[Math.floor(Math.random()*posts.length)], "_self"); };</script>
+<script>const posts=["posts/9c1a.html","posts/a6b9.html","posts/9b40.html"];function toRandomPost(){ window.pjax ? pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]) : window.open('/'+posts[Math.floor(Math.random()*posts.length)], "_self"); };</script>
