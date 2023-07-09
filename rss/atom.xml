@@ -6,7 +6,7 @@
   <link href="https://tzxawa.eu.org/rss/atom.xml" rel="self"/>
   
   <link href="https://tzxawa.eu.org/"/>
-  <updated>2023-07-07T11:32:55.783Z</updated>
+  <updated>2023-07-09T10:31:41.634Z</updated>
   <id>https://tzxawa.eu.org/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://tzxawa.eu.org/posts/9c1a.html"/>
     <id>https://tzxawa.eu.org/posts/9c1a.html</id>
     <published>2023-06-09T16:00:00.000Z</published>
-    <updated>2023-07-07T11:32:55.783Z</updated>
+    <updated>2023-07-09T10:31:41.634Z</updated>
     
     
     <summary type="html">100</summary>
@@ -40,7 +40,7 @@
     <link href="https://tzxawa.eu.org/posts/a6b9.html"/>
     <id>https://tzxawa.eu.org/posts/a6b9.html</id>
     <published>2023-05-20T10:55:41.000Z</published>
-    <updated>2023-07-07T11:32:55.783Z</updated>
+    <updated>2023-07-09T10:31:41.634Z</updated>
     
     
     <summary type="html">100</summary>
@@ -51,27 +51,6 @@
     
     
     <category term="玩机" scheme="https://tzxawa.eu.org/tags/%E7%8E%A9%E6%9C%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>博客使用手册</title>
-    <link href="https://tzxawa.eu.org/posts/9b40.html"/>
-    <id>https://tzxawa.eu.org/posts/9b40.html</id>
-    <published>2023-04-09T00:38:48.000Z</published>
-    <updated>2023-07-07T11:32:55.783Z</updated>
-    
-    
-    <summary type="html">100</summary>
-    
-    
-    
-    <category term="Blog" scheme="https://tzxawa.eu.org/categories/Blog/"/>
-    
-    
-    <category term="Hexo" scheme="https://tzxawa.eu.org/tags/Hexo/"/>
-    
-    <category term="Acrylic" scheme="https://tzxawa.eu.org/tags/Acrylic/"/>
     
   </entry>
   
