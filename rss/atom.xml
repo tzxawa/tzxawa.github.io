@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>天子笑</title>
+  <icon>https://tzxawa.eu.org/img/avatar.webp</icon>
+  <subtitle>忘羡一曲远 曲终人不散</subtitle>
+  <link href="https://tzxawa.eu.org/rss/atom.xml" rel="self"/>
+  
+  <link href="https://tzxawa.eu.org/"/>
+  <updated>2024-02-17T09:49:56.833Z</updated>
+  <id>https://tzxawa.eu.org/</id>
+  
+  <author>
+    <name>天子笑</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>为第三方系统接入HMS</title>
+    <link href="https://tzxawa.eu.org/posts/bfce.html"/>
+    <id>https://tzxawa.eu.org/posts/bfce.html</id>
+    <published>2023-07-13T16:00:00.000Z</published>
+    <updated>2024-02-17T09:49:56.833Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="技术" scheme="https://tzxawa.eu.org/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="玩机" scheme="https://tzxawa.eu.org/tags/%E7%8E%A9%E6%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>华为手机升降级</title>
+    <link href="https://tzxawa.eu.org/posts/a6b9.html"/>
+    <id>https://tzxawa.eu.org/posts/a6b9.html</id>
+    <published>2023-07-09T16:00:00.000Z</published>
+    <updated>2024-02-17T09:49:54.350Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;华为手机助手&quot;&gt;&lt;a href=&quot;#华为手机助手&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="技术" scheme="https://tzxawa.eu.org/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="玩机" scheme="https://tzxawa.eu.org/tags/%E7%8E%A9%E6%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>华为玩机指北</title>
+    <link href="https://tzxawa.eu.org/posts/9c1a.html"/>
+    <id>https://tzxawa.eu.org/posts/9c1a.html</id>
+    <published>2023-06-09T16:00:00.000Z</published>
+    <updated>2024-02-17T09:49:51.691Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;&lt;font</summary>
+        
+      
+    
+    
+    
+    <category term="技术" scheme="https://tzxawa.eu.org/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="玩机" scheme="https://tzxawa.eu.org/tags/%E7%8E%A9%E6%9C%BA/"/>
+    
+  </entry>
+  
+</feed>

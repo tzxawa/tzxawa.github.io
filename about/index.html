@@ -1,0 +1,334 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>关于 | 天子笑</title><noscript>开启JavaScript才能访问本站哦~</noscript><link rel="icon" href="https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/avatar.webp"><!-- index.css--><link rel="stylesheet" href="/css/index.css?v=1.4.7"><!-- inject head--><link rel="stylesheet" href="https://cdn.cbd.int/solitude-source/icon/scoicon.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/node-snackbar/0.1.16/snackbar.min.css"><!-- aplayer--><link rel="stylesheet" href="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.css"><!-- swiper--><link rel="stylesheet" href="https://cdn.staticfile.org/fancyapps-ui/5.0.33/fancybox/fancybox.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.16.9/katex.min.css"><!-- Open Graph--><meta name="description" content="关于"><!-- pwa--><script>(win => {
+        win.saveToLocal = {
+            set: function setWithExpiry(key, value, ttl) {
+                if (ttl === 0)
+                    return
+                const now = new Date()
+                const expiryDay = ttl * 86400000
+                const item = {
+                    value: value,
+                    expiry: now.getTime() + expiryDay,
+                }
+                localStorage.setItem(key, JSON.stringify(item))
+            },
+
+            get: function getWithExpiry(key) {
+                const itemStr = localStorage.getItem(key)
+
+                if (!itemStr) {
+                    return undefined
+                }
+                const item = JSON.parse(itemStr)
+                const now = new Date()
+
+                if (now.getTime() > item.expiry) {
+                    localStorage.removeItem(key)
+                    return undefined
+                }
+                return item.value
+            }
+        }
+
+        const DarkModeStatus = localStorage.getItem('theme')
+        if (DarkModeStatus !== null) {
+            if (DarkModeStatus === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark')
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light')
+            }
+        }
+
+        const asideStatus = saveToLocal.get('aside-status')
+        if (asideStatus !== undefined) {
+            if (asideStatus === 'hide') {
+                document.documentElement.classList.add('hide-aside')
+            } else {
+                document.documentElement.classList.remove('hide-aside')
+            }
+        }
+    }
+)(window)
+
+console.log(
+    "%c🔥 程序：Hexo | 主题：Hexo-Theme-Solitude | 作者：王卓Sco、亦封 | Github: https://github.com/wleelw/Hexo-theme-solitude | 版本：v1.4.7 😄",
+    "color: #fff; background: linear-gradient(-25deg, #a8edea, #fed6e3); padding: 8px 15px; border-radius: 8px; text-shadow: 2px 2px 4px white; color: black;"
+);</script><!-- global head--><script>const GLOBAL_CONFIG = {
+    root: '/',
+    algolia: undefined,
+    localsearch: undefined,
+    runtime: '2022-10-01 00:00:00',
+    lazyload: {
+        enable: false,
+        error: '/img/error_load.png'
+    },
+    hightlight: {
+        enable: true,
+        limit: 200,
+        expand: true,
+        copy: true,
+    },
+    randomlinks: false,
+    lang: {
+        theme: {
+            dark: '已切换至深色模式',
+            light: '已切换至浅色模式',
+        },
+        copy: {
+            success: '复制成功',
+            error: '复制失败',
+        },
+        backtop: '返回顶部',
+        time: {
+            recent: '最近',
+            yesterday: '昨天',
+            berforeyesterday: '前天',
+            daybefore: '天前',
+            runtime: '天',
+        },
+        search: {
+            empty: '找不到你查询的内容：${query}',
+            hit: '找到 ${hits} 条结果，用时 ${time} 毫秒',
+            placeholder: '输入关键词快速查找',
+        },
+        chs: {
+            chs_to_cht: '繁體中文',
+            cht_to_chs: '简体中文',
+        }
+    },
+    aside: {
+        sayhello: {
+            morning: '一日之计在于晨',
+            noon: '吃饱了才有力气干活',
+            afternoon: '集中精力，攻克难关',
+            night: '不要太劳累了，早睡更健康',
+            goodnight: '睡个好觉，保证精力充沛',
+        },
+        sayhello2: ["🤖️ 数码科技发烧友","🔍 分享与热心帮助","🏠 智能家居小能手","🤝 专修开发与体验","🏃 脚踏实地行动派","🧱 团队小组发动机"],
+    },
+    covercolor: {
+        enable: true
+    },
+    comment: {
+        enable: false,
+        type: '',
+        commentBarrage: false,
+        randomInfoStart: ["聪敏的","可爱的","美丽的"],
+        randomInfoEnd: ["白菜","小可爱","小仙女"],
+        twikoo: {
+            url: '',
+            accessToken: ''
+        },
+        waline: {
+            url: '',
+        }
+    },
+    lightbox: 'fancybox',
+    rightside: {
+        enable: true
+    },
+    ai: {
+        enable: false,
+        key: '',
+        talk: '我是王卓Sco开发的摘要生成助理ScoGPT，ScoGPT在静态部署时进行摘要的撰写，并且在访客访问时通过ScoCorrection转译后的文本摘要实现工具。我在这里只负责已经生成的摘要显示，你无法与我直接沟通，但我可以回答一些预设的问题。',
+        randomPost: false,
+    },
+    music: {
+        enable: true,
+    },
+    translate: {"defaultEncoding":2,"translateDelay":0},
+};</script><meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/rss/atom.xml" title="天子笑" type="application/atom+xml">
+</head><body id="body" data-type="about"><!-- universe--><canvas id="universe"></canvas><!-- loading--><div id="loading-box" onclick="preloader.endLoading();" style="zoom:1"><div class="loading-bg"><img class="loading-img nolazyload" src="https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/avatar.webp" alt="loading image"></div></div><script>const preloader = {
+    endLoading: () => {
+        document.getElementById('loading-box').classList.add('loaded');
+    },
+    initLoading: () => {
+        document.getElementById('loading-box').classList.remove('loaded');
+    },
+    removePaceDone: () => {
+        document.getElementById('body').classList = 'pace-done';
+    }
+}
+window.addEventListener('load', () => {
+    preloader.endLoading();
+});
+window.addEventListener('pjax:send', () => {
+    preloader.initLoading();
+});
+document.addEventListener('pjax:complete', () => {
+    preloader.endLoading();
+});</script><!-- console--><div id="console"><div class="close-btn" onclick="sco.hideConsole()"><i class="scoicon sco-close-fill"></i></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" onclick="sco.switchDarkMode()" title="昼夜切换" href="javascript:void(0);"><i class="scoicon sco-moon-clear-fill"></i></a></div><div class="console-btn-item" id="consoleHideAside"><a class="asideSwitch" onclick="sco.switchHideAside()" title="边栏显示控制" href="javascript:void(0);"><i class="scoicon sco-side-bar-fill"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="sco.musicToggle()"><a class="music-switch" title="音乐开关" href="javascript:void(0);"><i class="scoicon sco-disc-fill"></i></a></div></div><div class="console-mask" onclick="sco.hideConsole()"></div></div><!-- sidebar--><div id="sidebar" style="zoom: 1;"><div id="menu-mask" style="display: none;"></div><div id="sidebar-menus"><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" onclick="sco.switchDarkMode()" href="javascript:void(0);"><i class="scoicon sco-moon-clear-fill"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">我的</div><div class="back-menu-list"><a class="back-menu-item" href="https://tzxawa.eu.org/" title="博客"><img class="back-menu-item-icon" src="https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/avatar.webp" alt="我的"><span class="back-menu-item-text">博客</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文库</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="scoicon sco-folder-fill"></i><span>文章</span></a></li><li><a class="site-page child" href="/categories/"><i class="scoicon sco-checkbox-multiple-blank-fill"></i><span>分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="scoicon sco-price-tag-fill"></i><span>标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>我的</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/links/"><i class="scoicon sco-group-fill"></i><span>友链</span></a></li><li><a class="site-page child" href="/music/"><i class="scoicon sco-disc-fill"></i><span>音乐</span></a></li><li><a class="site-page child" href="/about/"><i class="scoicon sco-contacts-fill"></i><span>关于</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-widget card-tags card-archives card-webinfo card-allinfo"><div class="card-tag-cloud"><a href="/tags/%E7%8E%A9%E6%9C%BA/">玩机<sup>3</sup></a></div></div></div></div><!-- keyboard--><div class="page" id="body-wrap"><header class="not-top-img" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><div class="back-home-button" tabindex="-1"><i class="back-home-button-icon scoicon sco-more-fill"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">我的</div><div class="back-menu-list"><a class="back-menu-item" href="https://tzxawa.eu.org/" title="博客"><img class="back-menu-item-icon" src="https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/avatar.webp" alt="我的"><span class="back-menu-item-text">博客</span></a></div></div></div></div><a id="site-name" href="/" title="返回博客主页" target="_self"><span class="title">TZX</span></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">关于</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文库</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="scoicon sco-folder-fill"></i><span>文章</span></a></li><li><a class="site-page child" href="/categories/"><i class="scoicon sco-checkbox-multiple-blank-fill"></i><span>分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="scoicon sco-price-tag-fill"></i><span>标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>我的</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/links/"><i class="scoicon sco-group-fill"></i><span>友链</span></a></li><li><a class="site-page child" href="/music/"><i class="scoicon sco-disc-fill"></i><span>音乐</span></a></li><li><a class="site-page child" href="/about/"><i class="scoicon sco-contacts-fill"></i><span>关于</span></a></li></ul></div></div></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="travellings_button"><a class="site-page" target="_blank" rel="noopener" href="https://www.travellings.cn/go.html" title=""><i class="scoicon sco-train-line"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机一篇文章" href="javascript:void(0);"><i class="scoicon sco-signal-tower-fill"></i></a></div><div class="nav-button" id="nav-console"><a class="console_switchbutton" onclick="sco.showConsole()" title="中控台" href="javascript:void(0);"><i class="scoicon sco-dashboard-fill"></i></a></div><div class="nav-button" id="nav-totop" onclick="sco.toTop()"><a class="totopbtn"><i class="scoicon sco-arrow-up-line"></i><span id="percent">0</span></a></div><div id="toggle-menu"><a class="site-page"><i class="scoicon sco-menu-line"></i></a></div></div></div></nav></header><main class="layout hide-aside" id="content-inner"><div id="page"><div id="about-page"><div class="author-info"><div class="author-tag-left"><span class="author-tag">🤖️ 数码科技发烧友</span><span class="author-tag">🔍 分享与热心帮助</span><span class="author-tag">🏠 智能家居小能手</span></div><div class="author-img"><img src="https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/avatar.webp"></div><div class="author-tag-right"><span class="author-tag">专修开发与体验 🤝</span><span class="author-tag">脚踏实地行动派 🏃</span><span class="author-tag">团队小组发动机 🧱</span></div></div><div class="author-title">关于本站</div><div class="author-content"><div class="author-content-item myInfoAndSayHello"><div class="title1">你好，很高兴认识你👋</div><div class="title2"><span class="inline-word">我叫天子笑</span></div><div class="title1">是一名学生、独立开发者</div></div><div class="aboutsiteTips author-content-item"><div class="author-content-item-tips">追求</div><h2><span class="inline-word">源于<br>热爱而去创造</span><div class="mask"><span class="first-tips" data-show="">高效的程序</span><span>人性化体验</span><span>优秀的产品</span><span data-up="">出色的设计</span></div></h2></div></div><script>var pursuitInterval = null;
+pursuitInterval = setInterval(function () {
+    const show = document.querySelector('span[data-show]')
+    const next = show.nextElementSibling || document.querySelector('.first-tips')
+    const up = document.querySelector('span[data-up]')
+    if (up) {
+        up.removeAttribute('data-up')
+    }
+    show.removeAttribute('data-show')
+    show.setAttribute('data-up', '')
+    next.setAttribute('data-show', '')
+}, 2000)
+
+document.addEventListener('pjax:send', function () {
+    clearInterval(pursuitInterval);
+});</script><div class="author-content"><div class="author-content-item skills"><div class="card-content"><div class="author-content-item-tips">技能</div><span class="author-content-item-title">开启创造力</span><div class="skills-style-group"><div class="tags-group-all"><div class="tags-group-wrapper"><div class="tags-group-icon-pair"><div class="tags-group-icon" style="background:#989bf8"><img src="https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/icon/AE.webp" title="AfterEffect"></div><div class="tags-group-icon" style="background:#57b6e6"><img src="https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/icon/Docker.webp" title="Docker"></div></div><div class="tags-group-icon-pair"><div class="tags-group-icon" style="background:#4082c3"><img src="https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/icon/PS.webp" title="Photoshop"></div><div class="tags-group-icon" style="background:#ffffff"><img src="https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/icon/Python.webp" title="Python"></div></div><div class="tags-group-icon-pair"><div class="tags-group-icon" style="background:#2c51db"><img src="https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/icon/CSS3.webp" title="CSS3"></div><div class="tags-group-icon" style="background:#f7cb4f"><img src="https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/icon/JS.webp" title="JS"></div></div><div class="tags-group-icon-pair"><div class="tags-group-icon" style="background:#e9572b"><img src="https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/icon/HTML5.webp" title="HTML"></div><div class="tags-group-icon" style="background:#df5b40"><img src="https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/icon/Git.webp" title="Git"></div></div><div class="tags-group-icon-pair"><div class="tags-group-icon" style="background:#989bf8"><img src="https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/icon/AE.webp" title="AfterEffect"></div><div class="tags-group-icon" style="background:#57b6e6"><img src="https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/icon/Docker.webp" title="Docker"></div></div><div class="tags-group-icon-pair"><div class="tags-group-icon" style="background:#4082c3"><img src="https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/icon/PS.webp" title="Photoshop"></div><div class="tags-group-icon" style="background:#ffffff"><img src="https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/icon/Python.webp" title="Python"></div></div><div class="tags-group-icon-pair"><div class="tags-group-icon" style="background:#2c51db"><img src="https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/icon/CSS3.webp" title="CSS3"></div><div class="tags-group-icon" style="background:#f7cb4f"><img src="https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/icon/JS.webp" title="JS"></div></div><div class="tags-group-icon-pair"><div class="tags-group-icon" style="background:#e9572b"><img src="https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/icon/HTML5.webp" title="HTML"></div><div class="tags-group-icon" style="background:#df5b40"><img src="https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/icon/Git.webp" title="Git"></div></div></div></div><div class="skills-list"><div class="skill-info"><div class="skill-icon" style="background:#989bf8"><img src="https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/icon/AE.webp" title="AfterEffect"></div><div class="skill-name"><span>AfterEffect</span></div></div><div class="skill-info"><div class="skill-icon" style="background:#57b6e6"><img src="https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/icon/Docker.webp" title="Docker"></div><div class="skill-name"><span>Docker</span></div></div><div class="skill-info"><div class="skill-icon" style="background:#4082c3"><img src="https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/icon/PS.webp" title="Photoshop"></div><div class="skill-name"><span>Photoshop</span></div></div><div class="skill-info"><div class="skill-icon" style="background:#ffffff"><img src="https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/icon/Python.webp" title="Python"></div><div class="skill-name"><span>Python</span></div></div><div class="skill-info"><div class="skill-icon" style="background:#2c51db"><img src="https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/icon/CSS3.webp" title="CSS3"></div><div class="skill-name"><span>CSS3</span></div></div><div class="skill-info"><div class="skill-icon" style="background:#f7cb4f"><img src="https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/icon/JS.webp" title="JS"></div><div class="skill-name"><span>JS</span></div></div><div class="skill-info"><div class="skill-icon" style="background:#e9572b"><img src="https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/icon/HTML5.webp" title="HTML"></div><div class="skill-name"><span>HTML</span></div></div><div class="skill-info"><div class="skill-icon" style="background:#df5b40"><img src="https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/icon/Git.webp" title="Git"></div><div class="skill-name"><span>Git</span></div></div><div class="etc">...</div></div></div></div></div><div class="author-content-item careers"><div class="card-content"><div class="author-content-item-tips">生涯</div><span class="author-content-item-title">无限进步</span><div class="careers-group"><div class="careers-item"><div class="circle" style="background:#357ef5"></div><div class="name">软件工程, 学习</div></div></div><img class="author-content-img" alt="生涯"></div></div></div><div class="author-content"><div class="author-content-item personalities"><div class="author-content-item-tips">性格</div><span class="author-content-item-title">调停者</span><div class="title2" style="color:#33a474">INFP-T</div><div class="image"><img src="https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/about/INFP_T.svg"></div><div class="post-tips">在<a target="_blank" rel="noopener" href="https://www.16personalities.com/">16personalities</a>了解更多关于<a target="_blank" rel="noopener" href="https://www.16personalities.com/ch/infp-人格">调停者</a></div></div><div class="author-content-item myphoto"><img class="author-content-img" src="https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/hometop.webp" alt="自拍"></div></div><div class="author-content"><div class="author-content-item maxim"><div class="author-content-item-tips">座右铭</div><span class="maxim-title"><span>是非在己</span><span>毁誉由人</span></span></div><div class="author-content-item buff"><div class="card-content"><div class="author-content-item-tips">特长</div><span class="buff-title"><span>向往二次元的<span class="inline-word">御宅</span></span><span>二次元指数<span class="inline-word">MAX</span></span></span></div></div></div><div class="author-content"><div class="author-content-item game-apex" style="background: url(https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/about/minecraft.webp) no-repeat top; background-size: cover;"><div class="card-content"><div class="author-content-item-tips">爱好游戏</div><span class="author-content-item-title">Minecraft</span><div class="content-bottom"><div class="tips"></div><div class="tips"></div></div></div></div><div class="author-content-item game-jl" style="background: url(https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/about/tsukigakirei.webp) no-repeat top; background-size: cover;"><div class="card-content"><div class="author-content-item-tips">爱好番剧</div><span class="author-content-item-title">月がきれい</span><div class="content-bottom"><div class="tips"></div><div class="tips"></div></div></div></div></div><div class="author-content"><div class="author-content-item like-technology" style="background: url(https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/about/hobby.webp) no-repeat center;"><div class="card-content"><div class="author-content-item-tips">关注偏好</div><span class="author-content-item-title">数码科技</span><div class="content-bottom"><div class="tips">软件硬件</div></div></div></div><div class="author-content-item like-music" style="background: url(https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/about/music.webp) no-repeat center;"><div class="card-content"><div class="author-content-item-tips">音乐偏好</div><span class="author-content-item-title">ACG,POP,J-Rock</span><div class="content-bottom"><div class="tips">跟 天子笑 一起欣赏更多音乐</div><div class="banner-button-group"><a class="banner-button" href="/music/"><i class="scoicon sco-right-btn-fill"></i><span class="banner-button-text">更多推荐</span></a></div></div></div></div></div><div class="author-content"><div class="about-statistic author-content-item" style="background: url(https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/about/tj.webp);"><div class="card-content"><div class="author-content-item-tips">数据</div><span class="author-content-item-title">访问统计</span><div id="statistic"></div><div class="post-tips">统计信息来自<a href="https://invite.51.la/1NzKqTeb?target=V6">51la网站统计</a></div></div><script>fetch("https://v6-widget.51.la/v6/3F15j2vtdTo7PPcN/quote.js")
+    .then(res => res.text())
+    .then(data => {
+        const title = ["最近活跃", "今日人数", "今日访问", "昨日人数", "昨日访问", "本月访问", "总访问量"];
+        let num = data.match(/(<\/span><span>).*?(\/span><\/p>)/g);
+        num = num.map(el => {
+            let val = el.replace(/(<\/span><span>)/g, "");
+            return val.replace(/(<\/span><\/p>)/g, "");
+        });
+        const s = document.getElementById("statistic");
+        let html = '';
+        for (let i = 0; i < num.length; i++) {
+            if (i === 0 || i === num.length - 1) continue;
+            html += `<div><span>${title[i]}</span><span id="${title[i]}">${num[i]}</span></div>`;
+        }
+        s.innerHTML = html;
+    });
+
+</script></div><style>:root {
+    --site-about-oneself-map--light: url(https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/about/map_light.webp);
+    --site-about-oneself-map--dark: url(https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/about/map_dark.webp);
+}</style><div class="author-content-item-group column mapAndInfo"><div class="author-content-item map single"><span class="map-title">我现在住在 中国，广东省</span></div><div class="author-content-item selfInfo single"><div><span class="selfInfo-title">生于</span><span class="selfInfo-content" style="color: #43a6c6;">2006</span></div><div><span class="selfInfo-title">云深不知处</span><span class="selfInfo-content" style="color: #c69043;">计算机科学与技术</span></div><div><span class="selfInfo-title">现在职业</span><span class="selfInfo-content" style="color: #b04fe6;">学生</span></div></div></div></div><div class="author-content"><div class="create-site-post author-content-item single"><div class="author-content-item-tips">o(〃＾▽＾〃)o</div><span class="author-content-item-title">关于本站</span><br>希望你能在本站找到对你有帮助的东西~</div></div><div class="author-content" id="tenyear"><div class="create-site-post author-content-item single"><div class="author-content-item-tips">十年之约</div><div class="author-content-item-title">一个人的寂寞，一群人的狂欢。</div><p></p><div class="tenyear-timeline"><div class="progress"></div><div class="past-time"></div><div class="percentage-label"></div></div><div class="time-labels"><div class="start-time" id="tenyear-start-time">2022年10月01日</div><div class="end-time" id="tenyear-end-time">2032年10月01日</div></div></div></div><script>function parseDateString(e) {
+    return e.replace(/年|月/g, '-').replace(/日/g, '');
+}
+
+function tenYear() {
+    let progressElement = document.querySelector(".progress");
+    let pastTimeElement = document.querySelector(".past-time");
+    let percentageLabelElement = document.querySelector(".percentage-label");
+    let startTimeElement = document.getElementById("tenyear-start-time");
+    let endTimeElement = document.getElementById("tenyear-end-time");
+
+    let startTime = new Date(parseDateString(startTimeElement.textContent)).getTime();
+    let endTime = new Date(parseDateString(endTimeElement.textContent)).getTime();
+
+    function updateProgress() {
+        let currentTime = new Date().getTime();
+        let progress = ((currentTime - startTime) / (endTime - startTime) * 100);
+        let progressPercentage = progress <= 100 ? progress + "%" : "100%";
+
+        pastTimeElement.style.setProperty("--past-time-percentage", progress + "%");
+        progressElement.style.setProperty("--progress-percentage", progressPercentage);
+        if(progress > 5){
+            percentageLabelElement.textContent = `${progress.toFixed(0)}%`;
+            percentageLabelElement.style.left = `calc(${progress}% - 35px)`;
+        }
+    }
+
+    percentageLabelElement.style.visibility = "visible";
+    updateProgress();
+}
+
+document.getElementById("tenyear") && tenYear() && window.Pjax.on('complete', tenYear)</script><div class="author-content"><div class="author-content-item single reward"><div class="author-content-item-tips">致谢</div><span class="author-content-item-title">赞赏名单</span><div class="author-content-item-description">感谢赞赏的人，因为你们，让我感受到写博客这件事情能够给你们创造了价值。这会让我在这条路上走得更远。</div><div class="reward-list-all"><div class="reward-list-item"><div class="reward-list-item-name">天子笑</div><div class="reward-list-bottom-group"><div class="reward-list-item-money">¥ 0</div><time class="datatime reward-list-item-time" datetime="2021-10-01T08:00:00+08:00"></time></div></div><div class="post-reward"><div class="post-reward" onclick="AddRewardMask()"></div><div class="reward-button" title="赞赏作者"><i class="scoicon sco-hand-heart-fill"></i>赞赏作者</div><div class="reward-main"><ul class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/qrcode/wechatpay.webp" target="_blank"><img class="post-qr-code-img" alt="微信" src="https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/qrcode/wechatpay.webp"></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/qrcode/alipay.webp" target="_blank"><img class="post-qr-code-img" alt="支付宝" src="https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/qrcode/alipay.webp"></a><div class="post-qr-code-desc">支付宝</div></li></ul></ul></div></div></div><div class="reward-list-tips"><p>总金额：¥ 0.00，将全部用于博客的维护和更新。</p></div></div></div></div></div></main><footer id="footer"><div id="sco-footer-bar"><div class="footer-logo"><span class="scoicon">TZX</span></div><div class="footer-bar-description">来自天子笑 - 忘羡一曲远 曲终人不散的文章</div><a class="footer-bar-link" href="/">了解更多</a></div><div id="footer_deal"><a class="deal_link" target="_blank" rel="noopener" href="https://github.com/tzxawa" title="Github"><i class="scoicon scoicon sco-bilibili-line"></i></a><div class="footer_mini_logo" id="footer_mini_logo" title="返回顶部" onclick="sco.toTop()"><img src="https://jsd.onmicrosoft.cn/gh/tzxawa/static@main/img/avatar.webp" alt="返回顶部"></div><a class="deal_link" href="mailto:tzxawa@qq.com" title="Mail"><i class="scoicon scoicon sco-mail-line"></i></a></div><div id="sco-footer"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2022 - 2024 By&nbsp;<a class="footer-bar-link" href="/">天子笑</a></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/wleelw/hexo-theme-solitude" title="主题">主题</a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://icp.gov.moe/?keyword=20224131/" title="萌ICP备20224131号">萌ICP备20224131号</a><a class="footer-bar-link" href="/rss/atom.xml" title="订阅">订阅</a><a class="footer-bar-link cc"><i class="scoicon sco-copyright-line"></i><i class="scoicon sco-creative-commons-by-line"></i><i class="scoicon sco-creative-commons-nc-line"></i><i class="scoicon sco-creative-commons-nd-line"></i></a></div></div></div></footer></div><!-- inject body--><div><script src="/js/main.js?v=1.4.7"></script><script src="/js/utils.js?v=1.4.7"></script><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="scoicon sco-arrow-left-line"></i></div><div class="rightMenu-item" id="menu-forward"><i class="scoicon sco-arrow-right-line"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="scoicon sco-restart-line"></i></div><div class="rightMenu-item" id="menu-top"><i class="scoicon sco-arrow-up-line"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="scoicon sco-copy-fill"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="scoicon sco-clipboard-fill"></i><span>粘贴文本</span></div><div class="rightMenu-item" id="menu-newwindow"><i class="scoicon sco-window-fill"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="scoicon sco-link-line"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="scoicon sco-copy-fill"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="scoicon sco-download-cloud-fill"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-search"><i class="scoicon sco-search-line"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="scoicon sco-play-fill"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="scoicon sco-skip-back-fill"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="scoicon sco-skip-forward-fill"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open('https://y.qq.com/n/ryqq/playlist/8890004765', '_blank');"><i class="scoicon sco-play-list-2-line"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="scoicon sco-copy-fill"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-Link" id="menu-randomPost"><i class="scoicon sco-signal-tower-fill"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="scoicon sco-checkbox-multiple-blank-fill"></i><span>文章分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="scoicon sco-price-tag-fill"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><div class="rightMenu-item" id="menu-copy"><i class="scoicon sco-external-link-fill"></i><span>复制地址</span></div><div class="rightMenu-item" id="menu-darkmode"><i class="scoicon sco-moon-clear-fill"></i><span class="menu-darkmode-text">深色模式</span></div><div class="rightMenu-item" id="menu-translate"><i class="scoicon sco-panben-line"></i><span>轉為繁體</span></div></div></div><div id="rightmenu-mask"></div><script src="/js/rightside.js?v=1.4.7"></script><script src="https://cdn.cbd.int/solitude-source/js/universe.min.js"></script><script>dark()
+</script><script src="/js/tw_cn.js?v=1.4.7"></script><script src="https://cdn.staticfile.org/KaTeX/0.16.9/contrib/copy-tex.min.js"><script>(() => {
+    document.querySelectorAll('#article-container span.katex-display').forEach(item => {
+        utils.wrap(item, 'div', {class: 'katex-wrap'})
+    })
+})();
+</script></script><script src="https://cdn.staticfile.org/pjax/0.2.8/pjax.min.js"></script><script src="https://cdn.staticfile.org/node-snackbar/0.1.16/snackbar.min.js"></script><script src="https://cdn.staticfile.org/fancyapps-ui/5.0.33/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.js"></script><script src="https://cdn.staticfile.org/meting/2.0.1/Meting.min.js"></script><script>const meting_api = 'https://api.injahow.cn/meting/?server=:server&type=:type&id=:id&auth=:auth&r=:r';
+</script><script src="/js/covercolor/local.js?v=1.4.7"></script><script src="/js/music.js?v=1.4.7"></script><script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script></div><div id="js-pjax"><script id="config-diff">var PAGE_CONFIG = {
+    is_post: false,
+    is_page: true,
+    is_home: false,
+    page: 'about',
+    toc: false,
+    comment: false,
+}
+</script></div><!-- newest comment--><!-- pjax--><script>let pjaxSelectors = [
+    'title',
+    '#body-wrap',
+    '#site-config',
+    'meta[name="description"]',
+    '#js-pjax',
+    'meta[property^="og:"]',
+]
+
+const pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+})
+
+document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+})
+
+document.addEventListener('pjax:complete', () => {
+    window.refreshFn()
+})
+
+document.addEventListener('pjax:error', (e) => {
+    if (e.request.status === 404) {
+        pjax.loadUrl('/404.html')
+    }
+})</script><!-- theme--><script>initTheme = () => {
+    let isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const cachedMode = saveToLocal.get('theme');
+    if (cachedMode === undefined) {
+        const nowMode =
+            isDarkMode ? 'dark' : 'light'
+        document.documentElement.setAttribute('data-theme', nowMode);
+    } else {
+        document.documentElement.setAttribute('data-theme', cachedMode);
+    }
+}
+initTheme()</script><!-- search--><!-- music--><div class="needEndHide" id="nav-music" onclick="sco.musicToggle()"><div id="nav-music-hoverTips">音乐已暂停</div><meting-js id="8890004765" server="tencent" type="playlist" mutex="true" preload="none" data-lrctype="0" order="random" theme="var(--sco-main)"></meting-js></div>
+      <div id="sakana" style="position:fixed;right:0;bottom:0px;"></div>
+      <script async onload='initSakanaWidget({"character":"takina","enable":true,"enable_mobile":200,"size":100,"autoFit":false,"bottom":"0px","controls":false,"stroke":{"color":"#b4b4b4","width":10},"threshold":0.1,"rotate":0,"customCharacters":[]})' src="https://cdn.jsdelivr.net/npm/sakana-widget@2.3.0/lib/sakana.min.js"></script>
+      <script>
+      function log(msg) {
+        console.log("[hexo-sakana] " + msg);
+      }
+
+      function initSakanaWidget(config) {
+        if (
+          !config.enable_mobile &&
+          window.navigator.userAgent.match(
+            /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
+          )
+        ) {
+          log(
+            '检测为移动端，且配置中未开启在移动端启用组件，hexo-sakana 已禁用'
+          );
+          return;
+        }
+        for (character of config.customCharacters) {
+          if (!["takina", "chisato"].includes(character.base)) {
+            log(`无效基础角色 ${character.base}，取消注册`);
+            continue;
+          }
+          if (character.name === "") {
+            log("名称为空，取消注册");
+            continue;
+          }
+          const originCharacter = SakanaWidget.getCharacter(character.base);
+          originCharacter.initialState = {
+            ...originCharacter.initialState,
+            ...character,
+          };
+          originCharacter.image = !character.image ? originCharacter.image : character.image
+          SakanaWidget.registerCharacter(character.name, originCharacter);
+          log(`注册自定义角色：${character.name}`)
+        }
+        new SakanaWidget({
+          character: config.character,
+          size: config.size,
+          autoFit: config.autoFit,
+          controls: config.controls,
+          stroke: config.stroke,
+          threshold: config.threshold,
+          rotate: config.rotate,
+        }).mount("#sakana");
+      }
+  </script>
+    </body></html><script>const posts=["posts/bfce.html","posts/a6b9.html","posts/9c1a.html"];function toRandomPost(){ pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]); };</script>
